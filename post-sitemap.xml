@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="sitemap.xsl"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    <url>
+        <loc>https://www.computing-atman.com/</loc>
+        <changefreq>daily</changefreq>
+        <priority>1</priority>
+    </url>
+
+
+    <url>
+        <loc>https://www.computing-atman.com/2023/03/04/30-material-theme-hexo/</loc>
+        <lastmod>2023-03-05T13:04:54.420Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://www.computing-atman.com/2023/02/25/9-shooting-game-js/</loc>
+        <lastmod>2023-03-05T12:38:42.562Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://www.computing-atman.com/2023/02/25/5-oracle-db-to-csv-vbs/</loc>
+        <lastmod>2023-03-05T12:38:42.547Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://www.computing-atman.com/2023/02/25/6-custom-calendar-power-query/</loc>
+        <lastmod>2023-03-05T12:38:42.547Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://www.computing-atman.com/2023/02/25/7-dynamic-sql-power-query/</loc>
+        <lastmod>2023-03-05T12:38:42.547Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://www.computing-atman.com/2023/02/25/8-call-vbs-wsf/</loc>
+        <lastmod>2023-03-05T12:38:42.547Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://www.computing-atman.com/2023/03/05/31-recommended-plugins-hexo/</loc>
+        <lastmod>2023-03-05T12:38:42.500Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://www.computing-atman.com/2023/03/05/32-delete-view-instance-cash-wpf-prism-cs/</loc>
+        <lastmod>2023-03-05T12:38:42.500Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://www.computing-atman.com/2023/02/25/4-scroll-code-wordpress-hestia/</loc>
+        <lastmod>2023-03-05T12:38:42.500Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://www.computing-atman.com/2023/02/23/3-get-ini-data-vbs/</loc>
+        <lastmod>2023-03-05T12:38:42.478Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://www.computing-atman.com/2023/02/26/25-get-another-excel-data-excel-vba/</loc>
+        <lastmod>2023-03-05T12:38:42.462Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://www.computing-atman.com/2023/02/26/26-navigation-wpf-prism-cs/</loc>
+        <lastmod>2023-03-05T12:38:42.462Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://www.computing-atman.com/2023/02/27/27-dialog-wpf-prism-cs/</loc>
+        <lastmod>2023-03-05T12:38:42.462Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://www.computing-atman.com/2023/02/27/28-bind-datagrid-column-visibility-wpf-prism-cs/</loc>
+        <lastmod>2023-03-05T12:38:42.462Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://www.computing-atman.com/2023/03/02/29-datagrid-drag-and-drop-to-sort-wpf-cs/</loc>
+        <lastmod>2023-03-05T12:38:42.462Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://www.computing-atman.com/2023/02/26/24-excel4-sql-merge-excel-vba/</loc>
+        <lastmod>2023-03-05T12:38:42.446Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://www.computing-atman.com/2023/02/26/23-excel3-sql-insert-update-delete-excel-vba/</loc>
+        <lastmod>2023-03-05T12:38:42.415Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://www.computing-atman.com/2023/02/26/22-excel2-sql-select-excel-vba/</loc>
+        <lastmod>2023-03-05T12:38:42.399Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://www.computing-atman.com/2023/02/26/21-excel1-config-sheet-excel-vba/</loc>
+        <lastmod>2023-03-05T12:38:42.384Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://www.computing-atman.com/2023/02/26/17-excel-sheet-to-file-excel-vba/</loc>
+        <lastmod>2023-03-05T12:38:42.346Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://www.computing-atman.com/2023/02/26/18-ssh-connect-aws-db/</loc>
+        <lastmod>2023-03-05T12:38:42.346Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://www.computing-atman.com/2023/02/26/19-git-push-sample/</loc>
+        <lastmod>2023-03-05T12:38:42.346Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://www.computing-atman.com/2023/02/23/2-get-current-folder-vbs/</loc>
+        <lastmod>2023-03-05T12:38:42.346Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://www.computing-atman.com/2023/02/26/20-pc-camera-app-cs/</loc>
+        <lastmod>2023-03-05T12:38:42.346Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://www.computing-atman.com/2023/02/23/1-delete-file-folder-vbs/</loc>
+        <lastmod>2023-03-05T12:38:42.330Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://www.computing-atman.com/2023/02/25/10-update-javascript-wordpress/</loc>
+        <lastmod>2023-03-05T12:38:42.330Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://www.computing-atman.com/2023/02/25/11-web-request-json-mql/</loc>
+        <lastmod>2023-03-05T12:38:42.330Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://www.computing-atman.com/2023/02/25/12-typing-game-js/</loc>
+        <lastmod>2023-03-05T12:38:42.330Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://www.computing-atman.com/2023/02/25/13-notify-line-discord-slack-python/</loc>
+        <lastmod>2023-03-05T12:38:42.330Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://www.computing-atman.com/2023/02/25/14-naming-rule-python/</loc>
+        <lastmod>2023-03-05T12:38:42.330Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://www.computing-atman.com/2023/02/26/15-kill-oracle-session-excel-vba/</loc>
+        <lastmod>2023-03-05T12:38:42.330Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://www.computing-atman.com/2023/02/26/16-set-google-adsense-file-wordpress/</loc>
+        <lastmod>2023-03-05T12:38:42.330Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+</urlset>
+<!-- XML Sitemap generated by Hexo SEO Friendly Sitemap Generator -->

@@ -1,0 +1,1703 @@
+<!DOCTYPE html>
+<html style="display: none;" lang="ja">
+    <head>
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.5.6 -->
+    <script>
+        window.materialVersion = "1.5.6"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1',
+            '1.5.0',
+            '1.5.2',
+            '1.5.5'
+        ]
+    </script>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+
+
+
+
+
+
+    <link rel="dns-prefetch" href="https://www.google-analytics.com"/>
+
+
+
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com"/>
+
+
+
+
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- Title -->
+    
+    <title>
+        
+            【Javascript】タイピングゲームのサンプル | 
+        
+        Computing Atman
+    </title>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
+    <link rel="icon" href="/img/favicon.png">
+
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="description" itemprop="description" content="IT関連の情報を発信します。">
+    <meta name="keywords" content=",JavaScript,タイピングゲーム">
+    <meta name="theme-color" content="#0097A7">
+
+    <!-- Disable Fucking Bloody Baidu Tranformation -->
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.en.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(a){try{localStorage.removeItem(a)}catch(b){}};lsloader.setLS=function(a,c){try{localStorage.setItem(a,c)}catch(b){}};lsloader.getLS=function(a){var c="";try{c=localStorage.getItem(a)}catch(b){c=""}return c};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var b=[];for(var a=0;a<localStorage.length;a++){b.push(localStorage.key(a))}b.forEach(function(e){var f=lsloader.getLS(e);if(window.oldVersion){var d=window.oldVersion.reduce(function(g,h){return g||f.indexOf("/*"+h+"*/")!==-1},false);if(d){lsloader.removeLS(e)}}})}catch(c){}};lsloader.clean();lsloader.load=function(f,a,b,d){if(typeof b==="boolean"){d=b;b=undefined}d=d||false;b=b||function(){};var e;e=this.getLS(f);if(e&&e.indexOf(versionString)===-1){this.removeLS(f);this.requestResource(f,a,b,d);return}if(e){var c=e.split(versionString)[0];if(c!=a){console.log("reload:"+a);this.removeLS(f);this.requestResource(f,a,b,d);return}e=e.split(versionString)[1];if(d){this.jsRunSequence.push({name:f,code:e});this.runjs(a,f,e)}else{document.getElementById(f).appendChild(document.createTextNode(e));b()}}else{this.requestResource(f,a,b,d)}};lsloader.requestResource=function(b,e,a,c){var d=this;if(c){this.iojs(e,b,function(h,f,g){d.setLS(f,h+versionString+g);d.runjs(h,f,g)})}else{this.iocss(e,b,function(f){document.getElementById(b).appendChild(document.createTextNode(f));d.setLS(b,e+versionString+f)},a)}};lsloader.iojs=function(d,b,g){var a=this;a.jsRunSequence.push({name:b,code:""});try{var f=new XMLHttpRequest();f.open("get",d,true);f.onreadystatechange=function(){if(f.readyState==4){if((f.status>=200&&f.status<300)||f.status==304){if(f.response!=""){g(d,b,f.response);return}}a.jsfallback(d,b)}};f.send(null)}catch(c){a.jsfallback(d,b)}};lsloader.iocss=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.iofonts=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.runjs=function(f,c,e){if(!!c&&!!e){for(var b in this.jsRunSequence){if(this.jsRunSequence[b].name==c){this.jsRunSequence[b].code=e}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code));a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else{if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var d=this;var a=document.createElement("script");a.src=this.jsRunSequence[0].path;a.type="text/javascript";this.jsRunSequence[0].status="loading";a.onload=function(){d.jsRunSequence.shift();if(d.jsRunSequence.length>0){d.runjs()}};document.body.appendChild(a)}}};lsloader.tagLoad=function(b,a){this.jsRunSequence.push({name:a,code:"",path:b,status:"failed"});this.runjs()};lsloader.jsfallback=function(c,b){if(!!this.jsnamemap[b]){return}else{this.jsnamemap[b]=b}for(var a in this.jsRunSequence){if(this.jsRunSequence[a].name==b){this.jsRunSequence[a].code="";this.jsRunSequence[a].status="failed";this.jsRunSequence[a].path=c}}this.runjs()};lsloader.cssfallback=function(e,c,b){if(!!this.cssnamemap[c]){return}else{this.cssnamemap[c]=1}var d=document.createElement("link");d.type="text/css";d.href=e;d.rel="stylesheet";d.onload=d.onerror=b;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(d,a)};lsloader.runInlineScript=function(c,b){var a=document.getElementById(b).innerText;this.jsRunSequence.push({name:c,code:a});this.runjs()}})();</script>
+
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Import CSS -->
+    
+        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?FHxWBjH/JMTBvh8NmS/dNg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+        
+
+    
+
+    
+
+    <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Arial, sans-serif;
+    overflow-x: hidden !important;
+  }
+  
+  code {
+    font-family: 'Meiryo UI', メイリオ, Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #F5F5F5;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+<!-- Import Roboto -->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+
+
+<!-- Import Material Icons -->
+
+
+    <style id="material_icons"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+
+
+
+    <!-- Import jQuery -->
+    
+        <script>lsloader.load("jq_js","/js/jquery.min.js?ezyEvm8ST5CGfpA+kFFi1g==", true)</script>
+    
+
+    <!-- WebAPP Icons -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Computing Atman">
+    <meta name="msapplication-starturl" content="https://www.computing-atman.com/2023/02/25/12-typing-game-js/">
+    <meta name="msapplication-navbutton-color" content="#0097A7">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Computing Atman">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="/img/favicon.png">
+
+    <!-- Site Verification -->
+    
+    
+
+    <!-- RSS -->
+    
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="https://www.computing-atman.com/2023/02/25/12-typing-game-js/">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="【Javascript】タイピングゲームのサンプル | Computing Atman">
+    <meta property="og:image" content="/img/favicon.png">
+    <meta property="og:description" content="IT関連の情報を発信します。">
+    <meta property="og:article:tag" content="JavaScript"> <meta property="og:article:tag" content="タイピングゲーム"> 
+
+    
+        <meta property="article:published_time" content="Sat Feb 25 2023 23:38:29 GMT+0900">
+        <meta property="article:modified_time" content="Sun Mar 05 2023 21:38:42 GMT+0900">
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="https://www.computing-atman.com/2023/02/25/12-typing-game-js/index.html" />
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "https://www.computing-atman.com/2023/02/25/12-typing-game-js/index.html",
+    "headline": "【Javascript】タイピングゲームのサンプル",
+    "datePublished": "Sat Feb 25 2023 23:38:29 GMT+0900",
+    "dateModified": "Sun Mar 05 2023 21:38:42 GMT+0900",
+    "author": {
+        "@type": "Person",
+        "name": "Atman",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/avatar.png"
+        },
+        "description": "IT、プログラミング情報サイト"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Computing Atman",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.png"
+        }
+    },
+    "keywords": ",JavaScript,タイピングゲーム",
+    "description": "IT関連の情報を発信します。",
+}
+</script>
+
+
+    
+
+    <!-- Analytics -->
+    
+        <!-- 下記のデフォルトスクリプトは利用せず、直接タグを記載する事とした。by Atman
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'G-1W91JVY5LN', 'auto');ga('send', 'pageview');
+</script>
+-->
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1W91JVY5LN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-1W91JVY5LN');
+</script>
+
+<!-- Google AdSense Code -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3632222360837456"
+     crossorigin="anonymous"></script>
+
+    
+    
+    
+
+    <!-- Custom Head -->
+    
+
+<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Computing Atman" type="application/atom+xml">
+</head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span id="MD-burger-id" class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link"><span class="post-toc-number">1.</span> <span class="post-toc-text">概要</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link"><span class="post-toc-number">2.</span> <span class="post-toc-text">パッケージ構成</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link"><span class="post-toc-number">3.</span> <span class="post-toc-text">ソースコード解説</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">①index.html</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">②Common.js</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link"><span class="post-toc-number">3.3.</span> <span class="post-toc-text">③FlashingText.js</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link"><span class="post-toc-number">3.4.</span> <span class="post-toc-text">④Typing.js</span></a></li></ol></li></ol>
+    </ul>
+    
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        <!-- Custom Thumbnail -->
+        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(/img/thumbnails/thumbnail-12.png)">
+    
+            <p class="article-headline-p">
+                【Javascript】タイピングゲームのサンプル
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>Atman</strong>
+        <span>2月 25, 2023</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-none-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li><li class="mdl-menu__item"><a class="post_tag-none-link" href="/tags/%E3%82%BF%E3%82%A4%E3%83%94%E3%83%B3%E3%82%B0%E3%82%B2%E3%83%BC%E3%83%A0/" rel="tag">タイピングゲーム</a>
+    </ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=【Javascript】タイピングゲームのサンプル&url=https://www.computing-atman.com/2023/02/25/12-typing-game-js/index.html&via=Atman" target="_blank">
+            <li class="mdl-menu__item">
+                Twitter での共有
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://www.computing-atman.com/2023/02/25/12-typing-game-js/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                Facebook での共有
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=https://www.computing-atman.com/2023/02/25/12-typing-game-js/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                Google+ での共有
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+    
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <p>JavaScript を用いた『タイピングゲーム』を作成してみました。</p>
+<hr>
+<p>目次</p>
+<!-- toc -->
+
+<ul>
+<li><a href="#%E6%A6%82%E8%A6%81">概要</a></li>
+<li><a href="#%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E6%A7%8B%E6%88%90">パッケージ構成</a></li>
+<li><a href="#%E3%82%BD%E3%83%BC%E3%82%B9%E3%82%B3%E3%83%BC%E3%83%89%E8%A7%A3%E8%AA%AC">ソースコード解説</a><ul>
+<li><a href="#1indexhtml">①index.html</a></li>
+<li><a href="#2commonjs">②Common.js</a></li>
+<li><a href="#3flashingtextjs">③FlashingText.js</a></li>
+<li><a href="#4typingjs">④Typing.js</a></li>
+</ul>
+</li>
+</ul>
+<!-- tocstop -->
+
+<hr>
+<h2><span id="概要">概要</span></h2><p>制限時間内に、画面に表示された英単語をキーボードから入力していくゲームとなります。</p>
+<p><a target="_blank" rel="noopener" href="https://atman-33.github.io/typing-game-js/">サンプルゲームを再生</a></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/atman-33/typing-game-js">【ソースコードはこちら】</a></p>
+<img src="/2023/02/25/12-typing-game-js/typing.png" class>
+
+<h2><span id="パッケージ構成">パッケージ構成</span></h2><p>構成は下記となります。</p>
+<pre><code>js_typing_game
+├ index.html
+├ css
+│  └base.css
+└ js
+   ├Common.js
+   └class
+　    ├FlashingText.js
+　    └Typing.js
+</code></pre>
+<h2><span id="ソースコード解説">ソースコード解説</span></h2><p>ゲームを動かすメインのファイルは index.html となります。</p>
+<p>各ファイルに関する機能の概要は下記となりますので、大枠を掴んで頂ければ幸いです。</p>
+<pre><code>index.html	ゲームを動かすメイン処理
+base.css	ゲーム画面やキーボードの見栄えを加工
+Common.js	問題文のテキスト読込
+FlashingText.js	テキストの点滅処理
+Typing.js	タイピング文字の判定やキーボード点灯処理
+</code></pre>
+<p>ポイントとなるコード部分を主に解説していきます。</p>
+<hr>
+<h3><span id="1indexhtml">①index.html</span></h3><p>今回、ゲームの状態（gameState）を定義し、プレイヤーの操作に応じて、『準備中』→『タイピングゲーム中』→『ゲーム終了』と遷移するように工夫しました。</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta http-equiv=&quot;content-type&quot; charset=&quot;utf-8&quot;&gt;
+        &lt;link rel=&quot;stylesheet&quot; href=&quot;css/base.css&quot; /&gt;
+        &lt;script src=&quot;//code.createjs.com/1.0.0/createjs.min.js&quot;&gt;&lt;/script&gt;
+        &lt;script src=&quot;js/Common.js&quot;&gt;&lt;/script&gt;
+        &lt;script src=&quot;js/class/Typing.js&quot;&gt;&lt;/script&gt;
+        &lt;script src=&quot;js/class/FlashingText.js&quot;&gt;&lt;/script&gt;
+        &lt;script&gt;
+// ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----
+// JavaScript start
+
+// タイピングゲームの状態コード
+const READY = 0;    // 準備中
+const PLAYING = 1;  // タイピングゲーム中
+const END = 2;      // ゲーム終了
+
+var score = 0;      // スコア
+var timer = 30;     // タイマー（秒）
+
+var countdown = 3;              // 準備中のカウントダウン
+var wordsFile = &quot;words.txt&quot;;    // 問題が格納されたテキストファイル
+
+var gameState = READY;      // タイピングゲームの状態
+var typing = new Typing();  // タイピングクラス
+
+var flashingText = new FlashingText(&quot;input&quot;, &quot;スペースを押してください！！&quot;, 1000, 500, 0);
+
+var scoreText;
+var timerText;
+
+var subject;        // 上段テキスト表示スペース：題名
+var input;          // 下段テキスト表示スペース：入力表示内容
+
+var statementList;  // 問題リスト
+var statement;      // 問題文
+var numOfStatement; // 問題文の何文字目かを表す番号
+
+window.addEventListener(&quot;keydown&quot;, handleKeydown);
+window.addEventListener(&quot;keyup&quot;, handleKeyup);
+
+// ページ読み込み時に実行する処理
+window.onload = function()&#123;
+
+    statementList = readTextFileToArray(wordsFile);
+    typing.insertKeyboard(&quot;board&quot;);
+
+    // 0:準備中
+    if(gameState == READY) &#123;
+
+        flashingText.flash();   // 開始前のテキスト点滅表示
+    &#125;
+&#125;
+
+// ---- ---- ---- ---- ----
+// Key 処理 start
+
+// Keydown 処理
+function handleKeydown(event) &#123;
+
+    // 入力文字の処理
+    var chara = typing.checkWord(event);
+    // alert(&quot;押されたキーのコード : &quot; + event.keyCode);
+
+    // 0:準備中
+    if(gameState == READY) &#123;
+        if(event.keyCode == 32)&#123;    // スペースを押すと
+            startReady();           // 問題開始前の準備へ
+        &#125;
+    &#125;
+
+    // 1:タイピングゲーム中
+    if(gameState == PLAYING) &#123;
+        judgeTyping(chara);         // 打ち込まれた文字の正誤判定へ
+    &#125;
+&#125;
+
+// Keyup 処理
+function handleKeyup(event) &#123;
+
+    // CapsLock確認
+    var capslock;
+
+    if(typing.checkCapsLock(event) == 1) &#123;
+        capslock = document.getElementById(&#39;capslock&#39;);
+        capslock.innerHTML = &quot;CapsLock ON&quot;;
+    &#125; else &#123;
+        capslock = document.getElementById(&#39;capslock&#39;);
+        capslock.innerHTML = &quot;CapsLock OFF&quot;;
+    &#125;
+&#125;
+
+// Key 処理 end
+// ---- ---- ---- ---- ----
+
+// ゲーム開始前の準備
+function startReady() &#123;
+
+    flashingText.setMsg(&quot;まもなく開始します...&quot;);
+    flashingText.setIsFlashing(0);  // 点滅を停止
+
+    // subject IDタグにカウントダウンを表示
+    subject = document.getElementById(&#39;subject&#39;);
+    subject.innerHTML = countdown;
+
+    // 1秒おきにカウントダウン
+    var id = setInterval(function()&#123;
+        countdown--;
+        console.log(countdown);
+
+        subject.innerHTML = countdown;
+
+        if(countdown &lt;= 0)&#123;
+            clearInterval(id);
+            console.log(&quot;Finish!&quot;);
+            gameState = PLAYING;
+
+            startTimer();   // 残り時間のカウントダウンスタート
+            loadSubject();  // 問題文の読み込みへ
+        &#125;
+    &#125;, 1000);
+&#125;
+
+// 問題文を読み込み
+function loadSubject() &#123;
+
+    // statementList = [&quot;Test&quot;, &quot;Apple&quot;, &quot;Banana&quot;];
+
+    // 問題リストからランダムに問題を取り出す
+    statement = statementList[Math.floor(Math.random() * statementList.length)];
+
+    // 問題文の表示
+    subject = document.getElementById(&#39;subject&#39;);
+    subject.innerHTML = statement;
+
+    // 入力内容の表示
+    subject = document.getElementById(&#39;input&#39;);
+    subject.innerHTML = &quot;&quot;;
+
+    numOfStatement = 0;
+
+    // alert(&quot;タイピング文字：&quot; + statement.substr(numOfStatement, 1));
+
+    // キーボードの正解文字を色変え
+    typing.active(statement, numOfStatement);
+&#125;
+
+// 残り時間をカウントダウン
+function startTimer() &#123;
+
+    // timer IDタグにカウントダウンを表示
+    timerText = document.getElementById(&#39;timer&#39;);
+    timerText.innerHTML = &quot;残り時間：&quot; + timer;
+
+
+    // 1秒おきにカウントダウン
+    var id = setInterval(function()&#123;
+        timer--;
+        console.log(timer);
+
+        timerText.innerHTML = &quot;残り時間：&quot; + timer;
+
+        if(timer &lt;= 0)&#123;
+            if(gameState == PLAYING) &#123;
+                // 終了処理
+                subject = document.getElementById(&#39;subject&#39;);
+                subject.innerHTML = &quot;---- 終了 ----&quot;;
+                // alert(&quot;終了！！&quot;);
+                gameState = END;
+                clearInterval(id);
+            &#125;
+        &#125;
+    &#125;, 1000);
+&#125;
+
+// 打ち込まれた文字の正誤判定
+function judgeTyping(chara) &#123;
+    var seikai = statement.substr(numOfStatement, 1);
+
+    if(chara == seikai) &#123;
+        // 正解の場合
+        score = score + 10;
+
+        // 正解文字を追加（input IDタグに追記）
+        var input = document.getElementById(&#39;input&#39;);
+        input.innerHTML = input.innerHTML + chara;
+
+        // 次の文字へ
+        numOfStatement = numOfStatement + 1;
+
+        if(statement.length != numOfStatement) &#123;
+            // 問題文の文字が続く場合
+            typing.active(statement, numOfStatement);
+
+        &#125; else &#123;
+            score = score + 50;
+            // 次の問題へ
+            loadSubject();
+        &#125;
+
+    &#125; else &#123;
+        // 間違いの場合
+        // 何もしない
+    &#125;
+
+    // スコアを更新
+    scoreText = document.getElementById(&#39;score&#39;);
+    scoreText.innerHTML = &quot;スコア：&quot; + score;
+&#125;
+
+// JavaScript end
+// ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----
+        &lt;/script&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;!-- パネル表示 --&gt;
+        &lt;div id=&quot;panel&quot;&gt;
+            &lt;div id=&quot;score&quot;&gt;スコア：0&lt;/div&gt;
+            &lt;div id=&quot;timer&quot;&gt;残り時間：--&lt;/div&gt;
+            &lt;div id=&quot;capslock&quot;&gt;CapsLock --&lt;/div&gt;
+            &lt;div id=&quot;subject&quot;&gt;タイピングゲーム&lt;/div&gt;
+            &lt;div id=&quot;input&quot;&gt;input&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;!-- キーボード表示 --&gt;
+        &lt;div id=&quot;board&quot;&gt;
+        &lt;/div&gt;
+    &lt;/body&gt;
+    &lt;foot&gt;
+
+    &lt;/foot&gt;
+&lt;/html&gt;
+</code></pre>
+<p>実表示させる html 部分が少ないと感じるかもしれませんが、キーボード部分の表示内容（html）は、Typing.jsから呼び出すようにしました。</p>
+<p>これは、キーボードの色変更をTyping.jsから操作するため、1ファイル内に情報を格納させておく方が管理の面からしてよいと思ったからです。</p>
+<hr>
+<h3><span id="2commonjs">②Common.js</span></h3><p>ここでは、指定したテキストファイルを読み込んで配列を返す関数を格納しています。</p>
+<p>配列に格納する際の区切りは『改行』としました。</p>
+<pre><code>// ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----
+// breif : 指定したファイルを読み込んで配列を返す。
+// note  : 改行で区切る。
+// ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----
+function readTextFileToArray(file) &#123;
+
+    var array;
+
+    var rawFile = new XMLHttpRequest();
+    rawFile.open(&quot;GET&quot;, file, false);
+    rawFile.onreadystatechange = function ()
+    &#123;
+        if(rawFile.readyState === 4)
+        &#123;
+            if(rawFile.status === 200 || rawFile.status == 0)
+            &#123;
+                var allText = rawFile.responseText;
+                // alert(allText);
+
+                array = allText.split(/[\r\n]+/);
+            &#125;
+        &#125;
+    &#125;
+    rawFile.send(null);
+
+    return array;
+&#125;
+</code></pre>
+<hr>
+<h3><span id="3flashingtextjs">③FlashingText.js</span></h3><p>html ページ内のテキストを点滅させるクラスです。</p>
+<pre><code>// ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----
+// breif : 点滅テキストクラス
+// note  :
+// ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----
+class FlashingText &#123;
+
+    // ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----
+    // breif : コンストラクタ
+    // note  : 引数 id     -&gt; htmlのIDタグ
+    //              msg    -&gt; IDタグに表示させるメッセージ
+    //              onTime -&gt; 点灯時間[mm秒]
+    //              offTime-&gt; 消灯時間[mm秒]
+    //              flag   -&gt; 0:表示, 1:非表示    
+    // ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----
+    constructor(id, msg, onTime, offTime, flag) &#123;
+
+        this.id = id;
+        this.msg = msg;
+        this.onTime = onTime;
+        this.offTime = offTime;
+        this.flag = flag;
+
+        this.isFlashing = 1;    // 1:点滅させる　0:点滅させない
+    &#125;
+
+    // setter
+    setMsg(msg) &#123; this.msg = msg; &#125;
+    setIsFlashing(isFlashing) &#123;
+        this.isFlashing = isFlashing;
+        // alert(&quot;isFlashing:&quot; + this.isFlashing);
+    &#125;
+
+    // ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----
+    // breif : テキストを点滅させる
+    // note  :
+    // ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----
+    flash() &#123;
+
+        // 指定IDのテキストを取得
+        var element = document.getElementById(this.id);
+        var interval;
+
+        if(this.flag == 0)&#123;
+
+            // テキストを表示
+            element.innerHTML = this.msg;
+            this.flag = 1;
+            interval = this.onTime;
+        &#125;
+        else&#123;
+
+            // テキストを非表示
+            element.innerHTML = &quot;&quot;;
+            this.flag = 0;
+            interval = this.offTime;
+        &#125;
+
+        if(this.isFlashing == 1 || (this.isFlashing == 0 &amp;&amp; this.flag == 0)) &#123;
+            var self = this;
+            setTimeout(function() &#123;self.flash();&#125;, interval);
+        &#125;
+    &#125;
+&#125;
+</code></pre>
+<hr>
+<h3><span id="4typingjs">④Typing.js</span></h3><p>ポイントは、キーボード番号に対する文字列を辞書型で定義していることです。<br>さらに、CapsLockの状態で小文字&#x2F;大文字状態が変わってしまうため、CapsLockのON&#x2F;OFFそれぞれを別変数で定義しているのです。</p>
+<p>また、このクラスでは対応する文字列のキーボードを色付けする関数が含まれています（setactive メソッド）。</p>
+<p>文字列を引数として読み込むことで、htmlのタグ内classをもとに対応するキーボードを判断しています。<br>そのため、このクラスは表示させる html（キーボードを表示させる部分）と連携させる必要があるのですが、<br>別ファイルで管理するとメンテ面でもよろしくないため、<br>このクラスからキーボードのhtmlを表示させるように工夫しました。</p>
+<pre><code>// ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----
+// breif : タイピングクラス
+// note  :
+// ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----
+
+var codelist = &#123;8:[&quot;BackSpase&quot;,&quot;BackSpace&quot;], 9:[&quot;Tab&quot;,&quot;Tab&quot;], 13:[&quot;Enter&quot;,&quot;Enter&quot;], 16:[&quot;Shift&quot;,&quot;&quot;], 17:[&quot;Ctrl&quot;,&quot;&quot;]
+                , 20:[&quot;&quot;,&quot;caps&quot;], 32:[&quot; &quot;,&quot; &quot;], 45:[&quot;-&quot;,&quot;=&quot;], 48:[&quot;0&quot;,&quot;&quot;], 49:[&quot;1&quot;,&quot;!&quot;], 50:[&quot;2&quot;,&#39;&quot;&#39;], 51:[&quot;3&quot;,&quot;#&quot;]
+                , 52:[&quot;4&quot;,&quot;$&quot;], 53:[&quot;5&quot;,&quot;%&quot;], 54:[&quot;6&quot;,&quot;&amp;&quot;], 55:[&quot;7&quot;,&quot;&#39;&quot;], 56:[&quot;8&quot;,&quot;(&quot;], 57:[&quot;9&quot;,&quot;)&quot;], 58:[&quot;:&quot;,&quot;*&quot;]
+                , 59:[&quot;;&quot;,&quot;+&quot;], 61:[&quot;;&quot;,&quot;+&quot;], 64:[&quot;@&quot;,&quot;`&quot;], 65:[&quot;a&quot;,&quot;A&quot;], 66:[&quot;b&quot;,&quot;B&quot;], 67:[&quot;c&quot;,&quot;C&quot;], 68:[&quot;d&quot;,&quot;D&quot;]
+                , 69:[&quot;e&quot;,&quot;E&quot;], 70:[&quot;f&quot;,&quot;F&quot;], 71:[&quot;g&quot;,&quot;G&quot;], 72:[&quot;h&quot;,&quot;H&quot;], 73:[&quot;i&quot;,&quot;I&quot;], 74:[&quot;j&quot;,&quot;J&quot;], 75:[&quot;k&quot;,&quot;K&quot;]
+                , 76:[&quot;l&quot;,&quot;L&quot;], 77:[&quot;m&quot;,&quot;M&quot;], 78:[&quot;n&quot;,&quot;N&quot;], 79:[&quot;o&quot;,&quot;O&quot;], 80:[&quot;p&quot;,&quot;P&quot;], 81:[&quot;q&quot;,&quot;Q&quot;], 82:[&quot;r&quot;,&quot;R&quot;]
+                , 83:[&quot;s&quot;,&quot;S&quot;], 84:[&quot;t&quot;,&quot;T&quot;], 85:[&quot;u&quot;,&quot;U&quot;], 86:[&quot;v&quot;,&quot;V&quot;], 87:[&quot;w&quot;,&quot;W&quot;], 88:[&quot;x&quot;,&quot;X&quot;], 89:[&quot;y&quot;,&quot;Y&quot;]
+                , 90:[&quot;z&quot;,&quot;Z&quot;], 92:[&quot;\\&quot;,&quot;_&quot;], 96:[&quot;0&quot;,&quot;&quot;], 97:[&quot;1&quot;,&quot;&quot;], 98:[&quot;2&quot;,&quot;&quot;], 99:[&quot;3&quot;,&quot;&quot;], 100:[&quot;4&quot;,&quot;&quot;], 101:[&quot;5&quot;,&quot;&quot;]
+                , 102:[&quot;6&quot;,&quot;&quot;], 103:[&quot;7&quot;,&quot;&quot;], 104:[&quot;8&quot;,&quot;&quot;], 105:[&quot;9&quot;,&quot;&quot;], 107:[&quot;;&quot;,&quot;+&quot;], 109:[&quot;-&quot;,&quot;=&quot;], 160:[&quot;^&quot;,&quot;~&quot;]
+                , 173:[&quot;-&quot;,&quot;=&quot;], 186:[&quot;:&quot;,&quot;*&quot;], 187:[&quot;;&quot;,&quot;+&quot;], 188:[&quot;,&quot;,&quot;＜&quot;], 189:[&quot;-&quot;,&quot;=&quot;], 190:[&quot;.&quot;,&quot;＞&quot;], 191:[&quot;/&quot;,&quot;?&quot;]
+                , 192:[&quot;@&quot;,&quot;`&quot;], 219:[&quot;[&quot;,&quot;&#123;&quot;], 220:[&quot;\\&quot;,&quot;_&quot;], 221:[&quot;]&quot;,&quot;&#125;&quot;], 222:[&quot;^&quot;,&quot;~&quot;], 226:[&quot;\\&quot;,&quot;_&quot;], 222:[&quot;^&quot;,&quot;~&quot;]
+                , 240:[&quot;英数&quot;,&quot;&quot;], 244:[&quot;半/全&quot;,&quot;&quot;]&#125;;
+
+var capslist = &#123;8:[&quot;BackSpase&quot;,&quot;BackSpace&quot;], 9:[&quot;Tab&quot;,&quot;Tab&quot;], 13:[&quot;Enter&quot;,&quot;Enter&quot;], 16:[&quot;Shift&quot;,&quot;&quot;], 17:[&quot;Ctrl&quot;,&quot;&quot;]
+                , 20:[&quot;&quot;,&quot;caps&quot;], 32:[&quot; &quot;,&quot; &quot;], 45:[&quot;-&quot;,&quot;=&quot;], 48:[&quot;0&quot;,&quot;&quot;], 49:[&quot;1&quot;,&quot;!&quot;], 50:[&quot;2&quot;,&#39;&quot;&#39;], 51:[&quot;3&quot;,&quot;#&quot;]
+                , 52:[&quot;4&quot;,&quot;$&quot;], 53:[&quot;5&quot;,&quot;%&quot;], 54:[&quot;6&quot;,&quot;&amp;&quot;], 55:[&quot;7&quot;,&quot;&#39;&quot;], 56:[&quot;8&quot;,&quot;(&quot;], 57:[&quot;9&quot;,&quot;)&quot;], 58:[&quot;:&quot;,&quot;*&quot;]
+                , 59:[&quot;;&quot;,&quot;+&quot;], 61:[&quot;;&quot;,&quot;+&quot;], 64:[&quot;@&quot;,&quot;`&quot;], 65:[&quot;A&quot;,&quot;a&quot;], 66:[&quot;B&quot;,&quot;b&quot;], 67:[&quot;C&quot;,&quot;c&quot;], 68:[&quot;D&quot;,&quot;d&quot;]
+                , 69:[&quot;E&quot;,&quot;e&quot;], 70:[&quot;F&quot;,&quot;f&quot;], 71:[&quot;G&quot;,&quot;g&quot;], 72:[&quot;H&quot;,&quot;h&quot;], 73:[&quot;I&quot;,&quot;i&quot;], 74:[&quot;J&quot;,&quot;j&quot;], 75:[&quot;K&quot;,&quot;k&quot;]
+                , 76:[&quot;L&quot;,&quot;l&quot;], 77:[&quot;M&quot;,&quot;m&quot;], 78:[&quot;N&quot;,&quot;n&quot;], 79:[&quot;O&quot;,&quot;o&quot;], 80:[&quot;P&quot;,&quot;p&quot;], 81:[&quot;Q&quot;,&quot;q&quot;], 82:[&quot;R&quot;,&quot;r&quot;]
+                , 83:[&quot;S&quot;,&quot;s&quot;], 84:[&quot;T&quot;,&quot;t&quot;], 85:[&quot;U&quot;,&quot;u&quot;], 86:[&quot;V&quot;,&quot;v&quot;], 87:[&quot;W&quot;,&quot;w&quot;], 88:[&quot;X&quot;,&quot;x&quot;], 89:[&quot;Y&quot;,&quot;y&quot;]
+                , 90:[&quot;Z&quot;,&quot;z&quot;], 92:[&quot;\\&quot;,&quot;_&quot;], 96:[&quot;0&quot;,&quot;&quot;], 97:[&quot;1&quot;,&quot;&quot;], 98:[&quot;2&quot;,&quot;&quot;], 99:[&quot;3&quot;,&quot;&quot;], 100:[&quot;4&quot;,&quot;&quot;], 101:[&quot;5&quot;,&quot;&quot;]
+                , 102:[&quot;6&quot;,&quot;&quot;], 103:[&quot;7&quot;,&quot;&quot;], 104:[&quot;8&quot;,&quot;&quot;], 105:[&quot;9&quot;,&quot;&quot;], 107:[&quot;;&quot;,&quot;+&quot;], 109:[&quot;-&quot;,&quot;=&quot;], 160:[&quot;^&quot;,&quot;~&quot;]
+                , 173:[&quot;-&quot;,&quot;=&quot;], 186:[&quot;:&quot;,&quot;*&quot;], 187:[&quot;;&quot;,&quot;+&quot;], 188:[&quot;,&quot;,&quot;＜&quot;], 189:[&quot;-&quot;,&quot;=&quot;], 190:[&quot;.&quot;,&quot;＞&quot;], 191:[&quot;/&quot;,&quot;?&quot;]
+                , 192:[&quot;@&quot;,&quot;`&quot;], 219:[&quot;[&quot;,&quot;&#123;&quot;], 220:[&quot;\\&quot;,&quot;_&quot;], 221:[&quot;]&quot;,&quot;&#125;&quot;], 222:[&quot;^&quot;,&quot;~&quot;], 226:[&quot;\\&quot;,&quot;_&quot;], 222:[&quot;^&quot;,&quot;~&quot;]
+                , 240:[&quot;英数&quot;,&quot;&quot;], 244:[&quot;半/全&quot;,&quot;&quot;]&#125;;
+
+var leftcode = &#123;&quot;!&quot;:&quot;&quot;, &#39;&quot;&#39;:&quot;&quot;, &quot;#&quot;:&quot;&quot;, &quot;$&quot;:&quot;&quot;, &quot;%&quot;:&quot;&quot;, &quot;&amp;&quot;:&quot;&quot;, &quot;Q&quot;:&quot;&quot;, &quot;W&quot;:&quot;&quot;, &quot;E&quot;:&quot;&quot;, &quot;R&quot;:&quot;&quot;, &quot;T&quot;:&quot;&quot;, &quot;A&quot;:&quot;&quot;, &quot;S&quot;:&quot;&quot;
+                , &quot;D&quot;:&quot;&quot;, &quot;F&quot;:&quot;&quot;, &quot;G&quot;:&quot;&quot;, &quot;Z&quot;:&quot;&quot;, &quot;X&quot;:&quot;&quot;, &quot;C&quot;:&quot;&quot;, &quot;V&quot;:&quot;&quot;, &quot;B&quot;:&quot;&quot;&#125;;
+
+var leftcaps = &#123;&quot;!&quot;:&quot;&quot;, &#39;&quot;&#39;:&quot;&quot;, &quot;#&quot;:&quot;&quot;, &quot;$&quot;:&quot;&quot;, &quot;%&quot;:&quot;&quot;, &quot;&amp;&quot;:&quot;&quot;, &quot;q&quot;:&quot;&quot;, &quot;w&quot;:&quot;&quot;, &quot;e&quot;:&quot;&quot;, &quot;r&quot;:&quot;&quot;, &quot;t&quot;:&quot;&quot;, &quot;a&quot;:&quot;&quot;, &quot;s&quot;:&quot;&quot;
+                , &quot;d&quot;:&quot;&quot;, &quot;f&quot;:&quot;&quot;, &quot;g&quot;:&quot;&quot;, &quot;z&quot;:&quot;&quot;, &quot;x&quot;:&quot;&quot;, &quot;c&quot;:&quot;&quot;, &quot;v&quot;:&quot;&quot;, &quot;b&quot;:&quot;&quot;&#125;;
+
+var eachactive = &#123;&quot;\\&quot;:&quot;220&quot;, &quot;|&quot;:&quot;220&quot;, &quot;_&quot;:&quot;226&quot;, &quot;;&quot;:&quot;187&quot;, &quot;+&quot;:&quot;187&quot;, &quot;:&quot;:&quot;186&quot;, &quot;*&quot;:&quot;186&quot;&#125;;
+
+var keyboardHTML = &#39;&#39;
+            + &#39;&lt;table id=&quot;keyboard&quot;&gt;&#39;
+            + &#39;&lt;tr class=&quot;tr0&quot;&gt;&#39;
+            + &#39;&lt;td colspan=&quot;30&quot; class=&quot;col30&quot;&gt;&#39;
+            + &#39;&lt;span class=&quot;col key code027&quot;&gt;Esc&lt;/span&gt;&#39;
+            + &#39;&lt;span class=&quot;col key&quot;&gt;F1&lt;/span&gt;&#39;
+            + &#39;&lt;span class=&quot;col key&quot;&gt;F2&lt;/span&gt;&#39;
+            + &#39;&lt;span class=&quot;col key&quot;&gt;F3&lt;/span&gt;&#39;
+            + &#39;&lt;span class=&quot;col key&quot;&gt;F4&lt;/span&gt;&#39;
+            + &#39;&lt;span class=&quot;col key&quot;&gt;F5&lt;/span&gt;&#39;
+            + &#39;&lt;span class=&quot;col key&quot;&gt;F6&lt;/span&gt;&#39;
+            + &#39;&lt;span class=&quot;col key&quot;&gt;F7&lt;/span&gt;&#39;
+            + &#39;&lt;span class=&quot;col key&quot;&gt;F8&lt;/span&gt;&#39;
+            + &#39;&lt;span class=&quot;col key&quot;&gt;F9&lt;/span&gt;&#39;
+            + &#39;&lt;span class=&quot;col key&quot;&gt;F10&lt;/span&gt;&#39;
+            + &#39;&lt;span class=&quot;col key&quot;&gt;F11&lt;/span&gt;&#39;
+            + &#39;&lt;span class=&quot;col key&quot;&gt;F12&lt;/span&gt;&#39;
+            + &#39;&lt;span class=&quot;col key&quot;&gt;Num&lt;/span&gt;&#39;
+            + &#39;&lt;span class=&quot;col key&quot;&gt;Prt&lt;/span&gt;&#39;
+            + &#39;&lt;span class=&quot;col key&quot;&gt;Ins&lt;/span&gt;&#39;
+            + &#39;&lt;span class=&quot;col key&quot;&gt;Del&lt;/span&gt;&#39;
+            + &#39;&lt;/td&gt;&#39;
+            + &#39;&lt;/tr&gt;&#39;
+            + &#39;&lt;tr class=&quot;tr1&quot;&gt;&#39;
+            + &#39;&lt;td colspan=&quot;1&quot; class=&quot;col1 key&quot;&gt;&lt;div class=&quot;table code244&quot;&gt;半&lt;/div&gt;&lt;/td&gt;&#39;
+            + &#39;&lt;td colspan=&quot;2&quot; class=&quot;col2 key&quot;&gt;&lt;div class=&quot;table code049&quot;&gt;1&lt;span class=&quot;subkey&quot;&gt;!&lt;/span&gt;&lt;/div&gt;&lt;/td&gt;&#39;
+            + &#39;&lt;td colspan=&quot;2&quot; class=&quot;col2 key&quot;&gt;&lt;div class=&quot;table code050&quot;&gt;2&lt;span class=&quot;subkey&quot;&gt;”&lt;/span&gt;&lt;/div&gt;&lt;/td&gt;&#39;
+            + &#39;&lt;td colspan=&quot;2&quot; class=&quot;col2 key&quot;&gt;&lt;div class=&quot;table code051&quot;&gt;3&lt;span class=&quot;subkey&quot;&gt;#&lt;/span&gt;&lt;/div&gt;&lt;/td&gt;&#39;
+            + &#39;&lt;td colspan=&quot;2&quot; class=&quot;col2 key&quot;&gt;&lt;div class=&quot;table code052&quot;&gt;4&lt;span class=&quot;subkey&quot;&gt;$&lt;/span&gt;&lt;/div&gt;&lt;/td&gt;&#39;
+            + &#39;&lt;td colspan=&quot;2&quot; class=&quot;col2 key&quot;&gt;&lt;div class=&quot;table code053&quot;&gt;5&lt;span class=&quot;subkey&quot;&gt;%&lt;/span&gt;&lt;/div&gt;&lt;/td&gt;&#39;
+            + &#39;&lt;td colspan=&quot;2&quot; class=&quot;col2 key&quot;&gt;&lt;div class=&quot;table code054&quot;&gt;6&lt;span class=&quot;subkey&quot;&gt;&amp;&lt;/span&gt;&lt;/div&gt;&lt;/td&gt;&#39;
+            + &#39;&lt;td colspan=&quot;2&quot; class=&quot;col2 key&quot;&gt;&lt;div class=&quot;table code055&quot;&gt;7&lt;span class=&quot;subkey&quot;&gt;’&lt;/span&gt;&lt;/div&gt;&lt;/td&gt;&#39;
+            + &#39;&lt;td colspan=&quot;2&quot; class=&quot;col2 key&quot;&gt;&lt;div class=&quot;table code056&quot;&gt;8&lt;span class=&quot;subkey&quot;&gt;（&lt;/span&gt;&lt;/div&gt;&lt;/td&gt;&#39;
+            + &#39;&lt;td colspan=&quot;2&quot; class=&quot;col2 key&quot;&gt;&lt;div class=&quot;table code057&quot;&gt;9&lt;span class=&quot;subkey&quot;&gt;）&lt;/span&gt;&lt;/div&gt;&lt;/td&gt;&#39;
+            + &#39;&lt;td colspan=&quot;2&quot; class=&quot;col2 key&quot;&gt;&lt;div class=&quot;table code048&quot;&gt;0&lt;/div&gt;&lt;/td&gt;&#39;
+            + &#39;&lt;td colspan=&quot;2&quot; class=&quot;col2 key&quot;&gt;&lt;div class=&quot;table code189 code109 code173 code045&quot;&gt;-&lt;span class=&quot;subkey&quot;&gt;=&lt;/span&gt;&lt;/div&gt;&lt;/td&gt;&#39;
+            + &#39;&lt;td colspan=&quot;2&quot; class=&quot;col2 key&quot;&gt;&lt;div class=&quot;table code222 code160&quot;&gt;^&lt;span class=&quot;subkey&quot;&gt;~&lt;/span&gt;&lt;/div&gt;&lt;/td&gt;&#39;
+            + &#39;&lt;td colspan=&quot;2&quot; class=&quot;col2 key&quot;&gt;&lt;div class=&quot;table code220&quot;&gt;\&lt;span class=&quot;subkey&quot;&gt;|&lt;/span&gt;&lt;/div&gt;&lt;/td&gt;&#39;
+            + &#39;&lt;td colspan=&quot;3&quot; class=&quot;col3 key&quot;&gt;&lt;div class=&quot;table code008&quot;&gt;Back&lt;/div&gt;&lt;/td&gt;&#39;
+            + &#39;&lt;/tr&gt;&#39;
+            + &#39;&lt;tr class=&quot;tr2&quot;&gt;&#39;
+            + &#39;&lt;td colspan=&quot;2&quot; class=&quot;col2 key&quot;&gt;&lt;div class=&quot;table code009&quot;&gt;Tab&lt;/div&gt;&lt;/td&gt;&#39;
+            + &#39;&lt;td colspan=&quot;2&quot; class=&quot;col2 key&quot;&gt;&lt;div class=&quot;table code081&quot;&gt;Q&lt;/div&gt;&lt;/td&gt;&#39;
+            + &#39;&lt;td colspan=&quot;2&quot; class=&quot;col2 key&quot;&gt;&lt;div class=&quot;table code087&quot;&gt;W&lt;/div&gt;&lt;/td&gt;&#39;
+            + &#39;&lt;td colspan=&quot;2&quot; class=&quot;col2 key&quot;&gt;&lt;div class=&quot;table code069&quot;&gt;E&lt;/div&gt;&lt;/td&gt;&#39;
+            + &#39;&lt;td colspan=&quot;2&quot; class=&quot;col2 key&quot;&gt;&lt;div class=&quot;table code082&quot;&gt;R&lt;/div&gt;&lt;/td&gt;&#39;
+            + &#39;&lt;td colspan=&quot;2&quot; class=&quot;col2 key&quot;&gt;&lt;div class=&quot;table code084&quot;&gt;T&lt;/div&gt;&lt;/td&gt;&#39;
+            + &#39;&lt;td colspan=&quot;2&quot; class=&quot;col2 key&quot;&gt;&lt;div class=&quot;table code089&quot;&gt;Y&lt;/div&gt;&lt;/td&gt;&#39;
+            + &#39;&lt;td colspan=&quot;2&quot; class=&quot;col2 key&quot;&gt;&lt;div class=&quot;table code085&quot;&gt;U&lt;/div&gt;&lt;/td&gt;&#39;
+            + &#39;&lt;td colspan=&quot;2&quot; class=&quot;col2 key&quot;&gt;&lt;div class=&quot;table code073&quot;&gt;I&lt;/div&gt;&lt;/td&gt;&#39;
+            + &#39;&lt;td colspan=&quot;2&quot; class=&quot;col2 key&quot;&gt;&lt;div class=&quot;table code079&quot;&gt;O&lt;/div&gt;&lt;/td&gt;&#39;
+            + &#39;&lt;td colspan=&quot;2&quot; class=&quot;col2 key&quot;&gt;&lt;div class=&quot;table code080&quot;&gt;P&lt;/div&gt;&lt;/td&gt;&#39;
+            + &#39;&lt;td colspan=&quot;2&quot; class=&quot;col2 key&quot;&gt;&lt;div class=&quot;table code192 code064&quot;&gt;@&lt;span class=&quot;subkey&quot;&gt;`&lt;/span&gt;&lt;/div&gt;&lt;/td&gt;&#39;
+            + &#39;&lt;td colspan=&quot;2&quot; class=&quot;col2 key&quot;&gt;&lt;div class=&quot;table code219&quot;&gt;[&lt;span class=&quot;subkey&quot;&gt;&#123;&lt;/span&gt;&lt;/div&gt;&lt;/td&gt;&#39;
+            + &#39;&lt;td colspan=&quot;1&quot; class=&quot;col1 key&quot;&gt;&lt;/td&gt;&#39;
+            + &#39;&lt;td colspan=&quot;3&quot; rowspan=&quot;2&quot; class=&quot;col3 key&quot;&gt;&lt;div class=&quot;table code013 row2&quot;&gt;Enter&lt;/div&gt;&lt;/td&gt;&#39;
+            + &#39;&lt;/tr&gt;&#39;
+            + &#39;&lt;tr class=&quot;tr3&quot;&gt;&#39;
+            + &#39;&lt;td colspan=&quot;3&quot; class=&quot;col3 key&quot;&gt;&lt;div class=&quot;table code240 code020&quot;&gt;英数&lt;/div&gt;&lt;/td&gt;&#39;
+            + &#39;&lt;td colspan=&quot;2&quot; class=&quot;col2 key&quot;&gt;&lt;div class=&quot;table code065&quot;&gt;A&lt;/div&gt;&lt;/td&gt;&#39;
+            + &#39;&lt;td colspan=&quot;2&quot; class=&quot;col2 key&quot;&gt;&lt;div class=&quot;table code083&quot;&gt;S&lt;/div&gt;&lt;/td&gt;&#39;
+            + &#39;&lt;td colspan=&quot;2&quot; class=&quot;col2 key&quot;&gt;&lt;div class=&quot;table code068&quot;&gt;D&lt;/div&gt;&lt;/td&gt;&#39;
+            + &#39;&lt;td colspan=&quot;2&quot; class=&quot;col2 key&quot;&gt;&lt;div class=&quot;table code070&quot;&gt;F&lt;/div&gt;&lt;/td&gt;&#39;
+            + &#39;&lt;td colspan=&quot;2&quot; class=&quot;col2 key&quot;&gt;&lt;div class=&quot;table code071&quot;&gt;G&lt;/div&gt;&lt;/td&gt;&#39;
+            + &#39;&lt;td colspan=&quot;2&quot; class=&quot;col2 key&quot;&gt;&lt;div class=&quot;table code072&quot;&gt;H&lt;/div&gt;&lt;/td&gt;&#39;
+            + &#39;&lt;td colspan=&quot;2&quot; class=&quot;col2 key&quot;&gt;&lt;div class=&quot;table code074&quot;&gt;J&lt;/div&gt;&lt;/td&gt;&#39;
+            + &#39;&lt;td colspan=&quot;2&quot; class=&quot;col2 key&quot;&gt;&lt;div class=&quot;table code075&quot;&gt;K&lt;/div&gt;&lt;/td&gt;&#39;
+            + &#39;&lt;td colspan=&quot;2&quot; class=&quot;col2 key&quot;&gt;&lt;div class=&quot;table code076&quot;&gt;L&lt;/div&gt;&lt;/td&gt;&#39;
+            + &#39;&lt;td colspan=&quot;2&quot; class=&quot;col2 key&quot;&gt;&lt;div class=&quot;table code187 code107 code059&quot;&gt;;&lt;span class=&quot;subkey&quot;&gt;+&lt;/span&gt;&lt;/div&gt;&lt;/td&gt;&#39;
+            + &#39;&lt;td colspan=&quot;2&quot; class=&quot;col2 key&quot;&gt;&lt;div class=&quot;table code186 code058&quot;&gt;:&lt;span class=&quot;subkey&quot;&gt;*&lt;/span&gt;&lt;/div&gt;&lt;/td&gt;&#39;
+            + &#39;&lt;td colspan=&quot;2&quot; class=&quot;col2 key&quot;&gt;&lt;div class=&quot;table code221&quot;&gt;]&lt;span class=&quot;subkey&quot;&gt;&#125;&lt;/span&gt;&lt;/div&gt;&lt;/td&gt;&#39;
+            + &#39;&lt;/tr&gt;&#39;
+            + &#39;&lt;tr class=&quot;tr4&quot;&gt;&#39;
+            + &#39;&lt;td colspan=&quot;4&quot; class=&quot;col4 key&quot;&gt;&lt;div class=&quot;table code016 code020&quot;&gt;Shift&lt;/div&gt;&lt;/td&gt;&#39;
+            + &#39;&lt;td colspan=&quot;2&quot; class=&quot;col2 key&quot;&gt;&lt;div class=&quot;table code090&quot;&gt;Z&lt;/div&gt;&lt;/td&gt;&#39;
+            + &#39;&lt;td colspan=&quot;2&quot; class=&quot;col2 key&quot;&gt;&lt;div class=&quot;table code088&quot;&gt;X&lt;/div&gt;&lt;/td&gt;&#39;
+            + &#39;&lt;td colspan=&quot;2&quot; class=&quot;col2 key&quot;&gt;&lt;div class=&quot;table code067&quot;&gt;C&lt;/div&gt;&lt;/td&gt;&#39;
+            + &#39;&lt;td colspan=&quot;2&quot; class=&quot;col2 key&quot;&gt;&lt;div class=&quot;table code086&quot;&gt;V&lt;/div&gt;&lt;/td&gt;&#39;
+            + &#39;&lt;td colspan=&quot;2&quot; class=&quot;col2 key&quot;&gt;&lt;div class=&quot;table code066&quot;&gt;B&lt;/div&gt;&lt;/td&gt;&#39;
+            + &#39;&lt;td colspan=&quot;2&quot; class=&quot;col2 key&quot;&gt;&lt;div class=&quot;table code078&quot;&gt;N&lt;/div&gt;&lt;/td&gt;&#39;
+            + &#39;&lt;td colspan=&quot;2&quot; class=&quot;col2 key&quot;&gt;&lt;div class=&quot;table code077&quot;&gt;M&lt;/div&gt;&lt;/td&gt;&#39;
+            + &#39;&lt;td colspan=&quot;2&quot; class=&quot;col2 key&quot;&gt;&lt;div class=&quot;table code188&quot;&gt;,&lt;span class=&quot;subkey&quot;&gt;&lt;&lt;/span&gt;&lt;/div&gt;&lt;/td&gt;&#39;
+            + &#39;&lt;td colspan=&quot;2&quot; class=&quot;col2 key&quot;&gt;&lt;div class=&quot;table code190&quot;&gt;.&lt;span class=&quot;subkey&quot;&gt;&gt;&lt;/span&gt;&lt;/div&gt;&lt;/td&gt;&#39;
+            + &#39;&lt;td colspan=&quot;2&quot; class=&quot;col2 key&quot;&gt;&lt;div class=&quot;table code191&quot;&gt;/&lt;span class=&quot;subkey&quot;&gt;?&lt;/span&gt;&lt;/div&gt;&lt;/td&gt;&#39;
+            + &#39;&lt;td colspan=&quot;2&quot; class=&quot;col2 key&quot;&gt;&lt;div class=&quot;table code226&quot;&gt;\&lt;span class=&quot;subkey&quot;&gt;_&lt;/span&gt;&lt;/div&gt;&lt;/td&gt;&#39;
+            + &#39;&lt;td colspan=&quot;2&quot; class=&quot;col2 key&quot;&gt;&lt;div class=&quot;table&quot;&gt;↑&lt;/div&gt;&lt;/td&gt;&#39;
+            + &#39;&lt;td colspan=&quot;2&quot; class=&quot;col2 key&quot;&gt;&lt;div class=&quot;table code016&quot;&gt;Shift&lt;/div&gt;&lt;/td&gt;&#39;
+            + &#39;&lt;/tr&gt;&#39;
+            + &#39;&lt;tr class=&quot;tr5&quot;&gt;&#39;
+            + &#39;&lt;td colspan=&quot;2&quot; class=&quot;col2 key&quot;&gt;&lt;div class=&quot;table&quot;&gt;Ctrl&lt;/div&gt;&lt;/td&gt;&#39;
+            + &#39;&lt;td colspan=&quot;2&quot; class=&quot;col2 key&quot;&gt;&lt;div class=&quot;table&quot;&gt;Fn&lt;/div&gt;&lt;/td&gt;&#39;
+            + &#39;&lt;td colspan=&quot;2&quot; class=&quot;col2 key&quot;&gt;&lt;div class=&quot;table&quot;&gt;Win&lt;/div&gt;&lt;/td&gt;&#39;
+            + &#39;&lt;td colspan=&quot;2&quot; class=&quot;col2 key&quot;&gt;&lt;div class=&quot;table&quot;&gt;Alt&lt;/div&gt;&lt;/td&gt;&#39;
+            + &#39;&lt;td colspan=&quot;2&quot; class=&quot;col2 key&quot;&gt;&lt;div class=&quot;table&quot;&gt;無&lt;/div&gt;&lt;/td&gt;&#39;
+            + &#39;&lt;td colspan=&quot;5&quot; class=&quot;col5 key&quot;&gt;&lt;div class=&quot;table code032&quot;&gt;&lt;/div&gt;&lt;/td&gt;&#39;
+            + &#39;&lt;td colspan=&quot;2&quot; class=&quot;col2 key&quot;&gt;&lt;div class=&quot;table&quot;&gt;変&lt;/div&gt;&lt;/td&gt;&#39;
+            + &#39;&lt;td colspan=&quot;2&quot; class=&quot;col2 key&quot;&gt;&lt;div class=&quot;table&quot;&gt;か&lt;/div&gt;&lt;/td&gt;&#39;
+            + &#39;&lt;td colspan=&quot;2&quot; class=&quot;col2 key&quot;&gt;&lt;div class=&quot;table&quot;&gt;Alt&lt;/div&gt;&lt;/td&gt;&#39;
+            + &#39;&lt;td colspan=&quot;1&quot; class=&quot;col1 key&quot;&gt;&lt;div class=&quot;table&quot;&gt;App&lt;/div&gt;&lt;/td&gt;&#39;
+            + &#39;&lt;td colspan=&quot;2&quot; class=&quot;col2 key&quot;&gt;&lt;div class=&quot;table&quot;&gt;Ctrl&lt;/div&gt;&lt;/td&gt;&#39;
+            + &#39;&lt;td colspan=&quot;2&quot; class=&quot;col2 key&quot;&gt;&lt;div class=&quot;table&quot;&gt;←&lt;/div&gt;&lt;/td&gt;&#39;
+            + &#39;&lt;td colspan=&quot;2&quot; class=&quot;col2 key&quot;&gt;&lt;div class=&quot;table&quot;&gt;↓&lt;/div&gt;&lt;/td&gt;&#39;
+            + &#39;&lt;td colspan=&quot;2&quot; class=&quot;col2 key&quot;&gt;&lt;div class=&quot;table&quot;&gt;→&lt;/div&gt;&lt;/td&gt;&#39;
+            + &#39;&lt;/tr&gt;&#39;
+            + &#39;&lt;/table&gt;&#39;;
+
+class Typing &#123;
+
+    // ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----
+    // breif : コンストラクタ
+    // note  :
+    // ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----
+    constructor() &#123;
+
+        this.capslock = &quot;&quot;
+    &#125;
+
+    // ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----
+    // breif : キーボードのhtmlを挿入
+    // note  :
+    // ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----
+    insertKeyboard(id) &#123;
+        document.getElementById(id).innerHTML = keyboardHTML;
+    &#125;
+
+    // ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----
+    // breif : 入力した文字を取得
+    // note  :
+    // ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----
+    checkWord(event) &#123;
+
+        var keycode, shiftcode, chara
+
+        keycode = event.keyCode;
+        shiftcode = event.shiftKey;
+
+        if(this.capslock==1)&#123;
+            chara = this.getcapschar(keycode,shiftcode);  
+        &#125;else&#123;
+            chara = this.getchar(keycode,shiftcode);
+        &#125;
+
+        return chara;
+    &#125;
+
+    // ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----
+    // breif : CapsLockを判定して取得
+    // note  :
+    // ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----
+    checkCapsLock(onKeyUpEvent) &#123;
+
+        if(onKeyUpEvent.getModifierState(&quot;CapsLock&quot;) == false) &#123;
+            console.log(&quot;CapsLock OFF&quot;);
+            this.capslock = 0;
+        &#125;
+        else &#123;
+            console.log(&quot;CapsLock ON&quot;);
+            this.capslock = 1;
+        &#125;
+
+        return this.capslock;
+    &#125;
+
+    // ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----
+    // breif : キーコードとシフト押下状態から文字を取得
+    // note  : CapsLock OFF
+    // ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----
+    getchar(keycode, shiftcode)&#123;
+        var chara;
+
+        if(keycode in codelist)&#123;
+            if(shiftcode)&#123;
+                   chara = codelist[keycode][1];
+            &#125;else&#123;
+                   chara = codelist[keycode][0];
+            &#125;
+        &#125;else&#123;
+            chara = &quot;&quot;;
+        &#125;
+        return chara;
+    &#125;
+
+    // ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----
+    // breif : キーコードとシフト押下状態から文字を取得
+    // note  : CapsLock ON
+    // ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----
+    getcapschar(keycode, shiftcode)&#123;
+        var chara;
+
+        if(keycode in capslist)&#123;
+            if(shiftcode)&#123;
+                   chara = capslist[keycode][1];
+            &#125;else&#123;
+                   chara = capslist[keycode][0];
+            &#125;
+        &#125;else&#123;
+            chara = &quot;&quot;;
+        &#125;
+        return chara;
+    &#125;
+
+    // ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----
+    // breif : キーボードの色状態を更新
+    // note  :
+    // ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----
+    active(statement, numOfStatement)&#123;
+
+        var ichi = numOfStatement;          // 問題文の位置（何番目）
+        var mondai = statement;             // 問題文
+        var mondailen = statement.length;   // 問題文の長さ
+
+        var left, list;
+
+        this.resetactive();
+        if(this.capslock==1)&#123;
+            // CapsLock:ON
+            left=leftcaps;
+            list=capslist;
+        &#125;else&#123;
+            // CapsLock:OFF
+            left=leftcode;
+            list=codelist;
+        &#125;
+        if(ichi!=mondailen)&#123;
+            for(var i in list)&#123;
+                if(list[i][0]==mondai.charAt(ichi))&#123;
+                    if(mondai.charAt(ichi) in eachactive)&#123;
+                            this.setactive(&quot;code&quot;+(&#39;00&#39;+eachactive[mondai.charAt(ichi)]).slice(-3),0);
+                    &#125;else&#123;
+                            this.setactive(&quot;code&quot;+(&#39;00&#39;+i).slice(-3),0);
+                    &#125;
+                &#125;else if(list[i][1]==mondai.charAt(ichi))&#123;
+                    if(mondai.charAt(ichi) == &quot;_&quot;)&#123;
+                            this.setactive(&quot;code226&quot;,0);
+                    &#125;else if(mondai.charAt(ichi) == &quot;|&quot;)&#123;
+                            this.setactive(&quot;code220&quot;,0);
+                    &#125;else&#123;
+                            this.setactive(&quot;code&quot;+(&#39;00&#39;+i).slice(-3),0);
+                    &#125;
+                    if(list[i][1] in left)&#123;
+                            this.setactive(&quot;code016&quot;,1);
+                    &#125;else&#123;
+                            this.setactive(&quot;code016&quot;,0);
+                    &#125;
+                &#125;
+            &#125;
+        &#125;
+    &#125;
+
+    // ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----
+    // breif : 対象のキーを色付けする。
+    // note  : targetClass -&gt; 色付けするクラス
+    //         targetNo    -&gt; 色付けする対象が複数ある場合の何番目かどうか
+    // ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----
+    setactive(targetClass,targetNo)&#123;
+        var allElements;
+        var elementname;
+
+        var foundElements = new Array();
+        if (document.all)&#123;
+            allElements = document.all;
+        &#125;else &#123;
+            allElements = document.getElementsByTagName(&quot;*&quot;);
+        &#125;
+        var elementslen;
+        var j=0;
+        for(var i=0,elementslen=allElements.length;i&lt;elementslen;i++)&#123;
+            elementname = allElements[i].className;
+            if(elementname.indexOf(targetClass,0) &gt; -1) &#123;
+                foundElements[j] = allElements[i];
+                j++;
+            &#125;
+        &#125;
+        foundElements[targetNo].style.background=&quot;#00ffff&quot;;
+    &#125;
+
+    // ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----
+    // breif : キーの色付けを解除する。
+    // note  :
+    // ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----
+    resetactive()&#123;
+        var allElements;
+        var elementname;
+
+        if (document.all)&#123;
+            allElements = document.all;
+        &#125;else &#123;
+            allElements = document.getElementsByTagName(&quot;*&quot;);
+        &#125;
+        var elementslen;
+        for(var i=0,elementslen=allElements.length;i&lt;elementslen;i++)&#123;
+            elementname = allElements[i].className;
+            if(elementname.indexOf(&quot;table&quot;,0) &gt; -1) &#123;
+                allElements[i].style.background=&quot;#ffffff&quot;;
+            &#125;
+        &#125;
+    &#125;
+&#125;
+</code></pre>
+<p>以上です。</p>
+
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/2023/02/25/13-notify-line-discord-slack-python/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            Newer
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2023/02/25/11-web-request-json-mql/" id="post_nav-older" class="next-content">
+            Older
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/img/avatar.png" alt="Atman's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="https://twitter.com/atman_33" target="_blank" title="Tweet Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Tweet Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                ホーム
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    過去の投稿
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2023/03/">3月 2023<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2023/02/">2月 2023<span class="sidebar_archives-count">28</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
+                
+                カテゴリー
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                <a class="sidebar_archives-link" href="/categories/AWS/">AWS<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/C/">C#<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/categories/Git/">Git<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Hexo/">Hexo<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/JavaScript/">JavaScript<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/MQL/">MQL<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/PowerQuery/">PowerQuery<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/Python/">Python<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/VBA/">VBA<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/categories/VBS/">VBS<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/WordPress/">WordPress<span class="sidebar_archives-count">3</span></a>
+            </ul>
+        </li>
+        
+            <li class="divider"></li>
+        
+    
+
+    <!-- Pages  -->
+    
+        <li>
+            <a href="/tags" title="タグ">
+                
+                    <i class="material-icons sidebar-material-icons">cloud_circle</i>
+                
+                タグ
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/links" title="リンク">
+                
+                    <i class="material-icons sidebar-material-icons">face</i>
+                
+                リンク
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/about" title="問い合わせ">
+                
+                    <i class="material-icons sidebar-material-icons">help</i>
+                
+                問い合わせ
+            </a>
+        </li>
+        
+    
+
+    <!-- Article Number  -->
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+    <div class="sidebar-divider"></div>
+
+
+<!-- Theme Material -->
+
+    <a href="https://github.com/viosey/hexo-theme-material"  class="sidebar-footer-text-a" target="_blank">
+        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+            テーマ - Material
+            <span class="sidebar-badge badge-circle">i</span>
+        </div>
+    </a>
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+        <a href="https://twitter.com/twitter" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-twitter">
+                <span class="visuallyhidden">Twitter</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Facebook -->
+    
+        <a href="https://www.facebook.com/facebook" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-facebook">
+                <span class="visuallyhidden">Facebook</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Google + -->
+    
+        <a href="https://www.google.com/" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-gplus">
+                <span class="visuallyhidden">Google Plus</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+
+    <!-- V2EX -->
+    
+
+    <!-- Segmentfault -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©&nbsp;<span year></span>&nbsp;Computing Atman
+            
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import JS File -->
+
+    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?wgjW/HuQG9JDgvPDPoRAng==", true)</script>
+
+
+
+    <script>lsloader.load("js_js","/js/js.min.js?LT4t6iE6m8TO1BLGGiNJqA==", true)</script>
+
+
+
+    <script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('
+<link rel="stylesheet" href="/css/uc.css">
+');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Import prettify js  -->
+
+
+    
+        <script>lsloader.load("hanabi","/js/hanabi-browser-bundle.js?3KhbRjbomJu68PRmIWfslQ==", true)</script>
+    
+
+
+<!-- Window Load -->
+<!-- add class for prettify -->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+    
+        
+        
+        HanabiBrowser.start('pre code',false);
+    
+</script>
+
+<!-- MathJax Load-->
+
+
+<!-- Bing Background -->
+
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Custom Footer -->
+
+
+
+<script>
+    var copyrightNow = new Date().getFullYear();
+    var textContent = document.querySelector('span[year]')
+
+    copyrightSince = 2023;
+    if (copyrightSince === copyrightNow||copyrightSince === 0000) {
+        textContent.textContent = copyrightNow
+    } else {
+        textContent.textContent = copyrightSince + ' - ' + copyrightNow
+    }
+
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.5.6 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+        </body>
+    
+</html>
