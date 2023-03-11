@@ -3,15 +3,50 @@
 
 
     <url>
+        <loc>https://www.computing-atman.com/tags/DB/</loc>
+        <lastmod>2023-03-11T14:06:59.103Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://www.computing-atman.com/tags/Oracle/</loc>
+        <lastmod>2023-03-11T14:06:59.103Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://www.computing-atman.com/tags/Xamarin/</loc>
+        <lastmod>2023-03-11T12:17:37.572Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://www.computing-atman.com/tags/Prism/</loc>
+        <lastmod>2023-03-11T12:17:37.572Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://www.computing-atman.com/tags/C/</loc>
+        <lastmod>2023-03-11T12:17:37.572Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://www.computing-atman.com/tags/%E3%83%9E%E3%83%86%E3%83%AA%E3%82%A2%E3%83%AB%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3/</loc>
-        <lastmod>2023-03-05T13:04:54.420Z</lastmod>
+        <lastmod>2023-03-11T01:32:03.721Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://www.computing-atman.com/tags/Hexo/</loc>
-        <lastmod>2023-03-05T13:04:54.420Z</lastmod>
+        <lastmod>2023-03-11T01:32:03.721Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -52,20 +87,6 @@
     </url>
 
     <url>
-        <loc>https://www.computing-atman.com/tags/DB/</loc>
-        <lastmod>2023-03-05T12:38:42.547Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://www.computing-atman.com/tags/Oracle/</loc>
-        <lastmod>2023-03-05T12:38:42.547Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://www.computing-atman.com/tags/VBS/</loc>
         <lastmod>2023-03-05T12:38:42.547Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -80,21 +101,7 @@
     </url>
 
     <url>
-        <loc>https://www.computing-atman.com/tags/Prism/</loc>
-        <lastmod>2023-03-05T12:38:42.500Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://www.computing-atman.com/tags/WPF/</loc>
-        <lastmod>2023-03-05T12:38:42.500Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://www.computing-atman.com/tags/C/</loc>
         <lastmod>2023-03-05T12:38:42.500Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>

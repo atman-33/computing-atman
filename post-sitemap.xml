@@ -9,8 +9,24 @@
 
 
     <url>
+        <loc>https://www.computing-atman.com/2023/03/11/34-install-oracle-xe/</loc>
+        <lastmod>2023-03-11T14:06:59.103Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://www.computing-atman.com/2023/03/11/33-prism-xamarin-form-uwp-assembly-error-cs/</loc>
+        <lastmod>2023-03-11T12:17:37.572Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://www.computing-atman.com/2023/03/04/30-material-theme-hexo/</loc>
-        <lastmod>2023-03-05T13:04:54.420Z</lastmod>
+        <lastmod>2023-03-11T01:32:03.721Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 

@@ -244,7 +244,7 @@
 
     
         <meta property="article:published_time" content="Sat Mar 04 2023 17:53:26 GMT+0900">
-        <meta property="article:modified_time" content="Sun Mar 05 2023 22:04:54 GMT+0900">
+        <meta property="article:modified_time" content="Sat Mar 11 2023 10:32:03 GMT+0900">
     
 
     <!-- The Twitter Card protocol -->
@@ -267,7 +267,7 @@
     "mainEntityOfPage": "https://www.computing-atman.com/2023/03/04/30-material-theme-hexo/index.html",
     "headline": "【Hexo】マテリアル（material）テーマの適用・設定方法",
     "datePublished": "Sat Mar 04 2023 17:53:26 GMT+0900",
-    "dateModified": "Sun Mar 05 2023 22:04:54 GMT+0900",
+    "dateModified": "Sat Mar 11 2023 10:32:03 GMT+0900",
     "author": {
         "@type": "Person",
         "name": "Atman",
@@ -558,15 +558,18 @@
 <p><a target="_blank" rel="noopener" href="https://nodejs.org/ja/">https://nodejs.org/ja/</a></p>
 <p>次に、ダウンロードした<strong>Windows Installer(.msi)をダブルクリックしてインストール</strong>します。</p>
 <h3><span id="hexoをインストール">Hexoをインストール</span></h3><p>コマンドプロンプトで以下を実行します。</p>
-<pre><code>npm install -g hexo-cli
+<pre><code>npm install hexo-cli -g
 </code></pre>
 <p>これで、<strong>Hexoのインストール完了</strong>です。</p>
-<h3><span id="hexoの環境構築">Hexoの環境構築</span></h3><p>ブログ用のディレクトリ（フォルダ）を準備します。<br>例として<code>「C:\hexo-blog」</code>をHexoブログ用ディレクトリとします。</p>
-<p>コマンドプロンプトで以下を実行します。</p>
-<pre><code>npx hexo init &#123;Hexoブログ用ディレクトリ&#125;
+<h3><span id="hexoの環境構築">Hexoの環境構築</span></h3><p>Hexo用のディレクトリ（フォルダ）を準備します。<br>例として<code>「C:\hexo-blog」</code>をHexo用ディレクトリとします。</p>
+<p>コマンドプロンプトで<code>init</code>を実行し、サイト用のフォルダを生成します。</p>
+<pre><code>npx hexo init Hexo用ディレクトリ
 
 例）
 npx hexo init C:\hexo-blog
+</code></pre>
+<p><code>cd Hexo用ディレクトリ</code>で移動し、</p>
+<pre><code>npm install
 </code></pre>
 <p>Hexoブログ用の各種ディレクトリが生成されていれば完了です。</p>
 <h2><span id="material-テーマ環境構築">material テーマ環境構築</span></h2><h3><span id="material-テーマをダウンロード">material テーマをダウンロード</span></h3><p><a target="_blank" rel="noopener" href="https://github.com/iblh/hexo-theme-material">オリジナル</a>はバグが残っていますので、修正版をダウンロードして下さい。</p>
@@ -574,36 +577,36 @@ npx hexo init C:\hexo-blog
 <p>Code &gt; Download ZIP でzipファイルをダウンロードします。</p>
 <img src="/2023/03/04/30-material-theme-hexo/2.png" class>
 
-<p>ダウンロードが完了すれば、zipを解凍し、中身を{Hexoブログ用ディレクトリ}直下の<strong>themes&#x2F;materialフォルダ</strong>に格納します。</p>
-<pre><code>&#123;Hexoブログ用ディレクトリ&#125;\
+<p>ダウンロードが完了すれば、zipを解凍し、中身をHexo用ディレクトリ直下の<strong>themes&#x2F;materialフォルダ</strong>に格納します。</p>
+<pre><code>Hexo用ディレクトリ\
 |-themes\
    |-material\
       ↑この中にzipファイルの中身が保存されていればOK
 </code></pre>
 <img src="/2023/03/04/30-material-theme-hexo/3.png" class>
 
-<h3><span id="material-テーマを設定">material テーマを設定</span></h3><p>次に、material テーマ を読み込むように修正します。<br>{Hexoブログ用ディレクトリ}内の「_config.yml」を テキストエディタ で開き、theme を material に変更します。</p>
-<p>▼{Hexoブログ用ディレクトリ}&#x2F;_config.yml</p>
+<h3><span id="material-テーマを設定">material テーマを設定</span></h3><p>次に、material テーマ を読み込むように修正します。<br>Hexo用ディレクトリ内の「_config.yml」を テキストエディタ で開き、theme を material に変更します。</p>
+<p>▼Hexo用ディレクトリ&#x2F;_config.yml</p>
 <img src="/2023/03/04/30-material-theme-hexo/4.png" class>
 
 <p>この時点でHexoブログをローカルサーバーで確認可能です。<br>確認するには、コマンドプロンプトで以下を実行します。</p>
-<pre><code>cd &#123;Hexoブログ用ディレクトリ&#125;
+<pre><code>cd Hexo用ディレクトリ
 hexo server -g
 </code></pre>
 <p>ブラウザでURLに<code>「http://localhost:4000」</code>を入力すれば、Hexoブログを確認できます。</p>
 <h2><span id="hexox2fmaterial-の-config-設定">Hexo&#x2F;material の config 設定</span></h2><p>Hexo 及び material テーマは初期設定のままでは扱い辛いため、設定を変更します。</p>
-<p>Hexoブログ用ディレクトリ内には、2つの_config.ymlファイルが存在します。<br>説明時にどちらの_config.ymlを示しているのか明確にするため、ここからは以下の名称で記載する事とします。</p>
+<p>Hexo用ディレクトリ内には、2つの_config.ymlファイルが存在します。<br>説明時にどちらの_config.ymlを示しているのか明確にするため、ここからは以下の名称で記載する事とします。</p>
 <ul>
 <li>①ルート_config.yml</li>
 <li>②テーマ_config.yml</li>
 </ul>
-<pre><code>&#123;Hexoブログ用ディレクトリ&#125;\
+<pre><code>Hexo用ディレクトリ\
 |-_config.ml・・・①ルート_config.yml
 |-themes\
    |-material
       |-_config.yml・・・②テーマ_config.yml
 </code></pre>
-<h3><span id="言語設定">言語設定</span></h3><p>Hexoブログ用ディレクトリから、テキストエディタで ルート_config.yml ファイルの language プロパティを設定します。</p>
+<h3><span id="言語設定">言語設定</span></h3><p>Hexo用ディレクトリから、テキストエディタで ルート_config.yml ファイルの language プロパティを設定します。</p>
 <p>▼ルート_config.yml</p>
 <img src="/2023/03/04/30-material-theme-hexo/5.png" class>
 
@@ -621,7 +624,7 @@ hexo server -g
 <p>▼テーマ_config.yml</p>
 <img src="/2023/03/04/30-material-theme-hexo/7.png" class>
 
-<p>参照元の画像ファイル置場は下記にありますので、必要に応じて修正します。<br><strong><code>&#123;Hexoブログ用ディレクトリ&#125;\themes\material\source\img</code></strong></p>
+<p>参照元の画像ファイル置場は下記にありますので、必要に応じて修正します。<br><strong><code>Hexo用\themes\material\source\img</code></strong></p>
 <h3><span id="seoを最適化">SEOを最適化</span></h3><p>この設定を有効にすると、構造化データがページのヘッダーに生成され、Google などの検索エンジンの SEO を改善するのに役立ちます。<br>ただし、<code>hexo g</code> に 問題がある場合は <code>false</code> に設定してみてください。</p>
 <p>▼テーマ_config.yml</p>
 <img src="/2023/03/04/30-material-theme-hexo/8.png" class>
@@ -636,7 +639,7 @@ hexo server -g
 <h3><span id="投稿ページ要旨の単語数">投稿ページ要旨の単語数</span></h3><p>▼テーマ_config.yml</p>
 <img src="/2023/03/04/30-material-theme-hexo/11.png" class>
 
-<h3><span id="投稿ページのサムネイル">投稿ページのサムネイル</span></h3><p>material テーマは 19 枚のシンプルな画像が準備されています。投稿ページにサムネイルが定義されていない場合、テーマはランダムフォルダ（{Hexoブログ用ディレクトリ}\themes\material\source\img\random）からランダムに写真を選択します。</p>
+<h3><span id="投稿ページのサムネイル">投稿ページのサムネイル</span></h3><p>material テーマは 19 枚のシンプルな画像が準備されています。投稿ページにサムネイルが定義されていない場合、テーマはランダムフォルダ（ディレクトリ\themes\material\source\img\random）からランダムに写真を選択します。</p>
 <p>ランダムに表示する画像数は下記から設定します。</p>
 <p>▼テーマ_config.yml</p>
 <img src="/2023/03/04/30-material-theme-hexo/12.png" class>
@@ -645,7 +648,7 @@ hexo server -g
 <p>▼投稿ページのファイル.md</p>
 <img src="/2023/03/04/30-material-theme-hexo/13.png" class>
 
-<p>上記の例では、「{Hexoブログ用ディレクトリ}\themes\material\source\img\thumbnails」フォルダを作成し、そこに保存したファイルをサムネイルとして利用しています。</p>
+<p>上記の例では、「Hexo用ディレクトリ\themes\material\source\img\thumbnails」フォルダを作成し、そこに保存したファイルをサムネイルとして利用しています。</p>
 <h3><span id="フォント">フォント</span></h3><p>フォントは、初期設定だと日本語の見栄えが良くなかったため、下記のように変更しました。</p>
 <p>▼テーマ_config.yml</p>
 <img src="/2023/03/04/30-material-theme-hexo/14.png" class>
@@ -686,13 +689,13 @@ hexo server -g
 <h3><span id="タグページ作成">タグページ作成</span></h3><p>▼テーマ_config.yml</p>
 <img src="/2023/03/04/30-material-theme-hexo/21.png" class>
 
-<p>コマンドプロンプトを開き、Hexoブログ用ディレクトリに移動して、以下のように入力します。</p>
+<p>コマンドプロンプトを開き、Hexo用ディレクトリに移動して、以下のように入力します。</p>
 <p>▼コマンドプロンプト</p>
-<pre><code>cd &#123;Hexoブログ用ディレクトリ&#125;
+<pre><code>cd Hexo用ディレクトリ
 hexo new page &quot;tags&quot;
 </code></pre>
-<p><code>&#123;Hexoブログ用ディレクトリ&#125;\source\tags</code> フォルダ内の <code>index.md</code> ファイルを、以下のように編集します。</p>
-<p>▼{Hexoブログ用ディレクトリ}\source\tags\index.md</p>
+<p><code>Hexo用ディレクトリ\source\tags</code> フォルダ内の <code>index.md</code> ファイルを、以下のように編集します。</p>
+<p>▼Hexo用ディレクトリ\source\tags\index.md</p>
 <pre><code>---
 title: tags
 date: 2023-02-26 15:50:54
@@ -703,13 +706,13 @@ layout: tags
 <h3><span id="リンクページ作成">リンクページ作成</span></h3><p>▼テーマ_config.yml</p>
 <img src="/2023/03/04/30-material-theme-hexo/22.png" class>
 
-<p>コマンドプロンプトを開き、Hexoブログ用ディレクトリに移動して、以下のように入力します。</p>
+<p>コマンドプロンプトを開き、Hexo用ディレクトリに移動して、以下のように入力します。</p>
 <p>▼コマンドプロンプト</p>
-<pre><code>cd &#123;Hexoブログ用ディレクトリ&#125;
+<pre><code>cd Hexo用ディレクトリ
 hexo new page &quot;links&quot;
 </code></pre>
-<p><code>&#123;Hexoブログ用ディレクトリ&#125;\source\links</code> フォルダ内の <code>index.md</code> ファイルを、以下のように編集します。</p>
-<p>▼{Hexoブログ用ディレクトリ}\source\links\index.md</p>
+<p><code>Hexo用ディレクトリ\source\links</code> フォルダ内の <code>index.md</code> ファイルを、以下のように編集します。</p>
+<p>▼Hexo用ディレクトリ\source\links\index.md</p>
 <pre><code>---
 title: links
 date: 2023-02-27 18:03:34
@@ -717,9 +720,9 @@ layout: links
 ---
 </code></pre>
 <p><strong><code>layout: links</code> が必須</strong>です。</p>
-<p>また、<code>Hexoブログ用ディレクトリ\source</code> フォルダ内に「<strong>_data</strong>」フォルダ を作成し、その直下に「<strong>links.yml</strong>」ファイルを作成して編集します。</p>
+<p>また、<code>Hexo用ディレクトリ\source</code> フォルダ内に「<strong>_data</strong>」フォルダ を作成し、その直下に「<strong>links.yml</strong>」ファイルを作成して編集します。</p>
 <p>編集内容のサンプルは下記となります。リンクを複数に増やす場合は、続けて記載していけばOKです。</p>
-<p>▼{Hexoブログ用ディレクトリ}\source\_data\links.yml</p>
+<p>▼Hexo用ディレクトリ\source\_data\links.yml</p>
 <pre><code>Github atman-33: 
     link: https://github.com/atman-33
     avatar: https://avatars.githubusercontent.com/u/41929192?v=4
@@ -734,15 +737,15 @@ Google Material Icons:
 <h3><span id="問い合わせページ作成">問い合わせページ作成</span></h3><p>▼テーマ_config.yml</p>
 <img src="/2023/03/04/30-material-theme-hexo/23.png" class>
 
-<p>コマンドプロンプトを開き、Hexoブログ用ディレクトリに移動して、以下のように入力します。</p>
+<p>コマンドプロンプトを開き、Hexo用ディレクトリに移動して、以下のように入力します。</p>
 <p>▼コマンドプロンプト</p>
-<pre><code>cd &#123;Hexoブログ用ディレクトリ&#125;
+<pre><code>cd Hexo用ディレクトリ
 hexo new page &quot;about&quot;
 </code></pre>
-<p><code>&#123;Hexoブログ用ディレクトリ&#125;\source\about</code> フォルダ内の <code>index.md</code> ファイルを編集します。</p>
-<p>▼{Hexoブログ用ディレクトリ}\source\about\index.md</p>
+<p><code>Hexo用ディレクトリ\source\about</code> フォルダ内の <code>index.md</code> ファイルを編集します。</p>
+<p>▼Hexo用ディレクトリ\source\about\index.md</p>
 <pre><code>---
-title: 問い合わせ先について
+title: 問い合わせ
 date: 2023-02-27 18:14:12
 ---
 
@@ -881,7 +884,7 @@ date: 2023-02-27 18:14:12
             </a>
             <ul class="dropdown-menu">
             <li>
-                <a class="sidebar_archives-link" href="/archives/2023/03/">3月 2023<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2023/02/">2月 2023<span class="sidebar_archives-count">28</span></a>
+                <a class="sidebar_archives-link" href="/archives/2023/03/">3月 2023<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2023/02/">2月 2023<span class="sidebar_archives-count">28</span></a>
             </ul>
         </li>
         
@@ -899,7 +902,7 @@ date: 2023-02-27 18:14:12
             </a>
             <ul class="dropdown-menu">
                 <li>
-                <a class="sidebar_archives-link" href="/categories/AWS/">AWS<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/C/">C#<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/categories/Git/">Git<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Hexo/">Hexo<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/JavaScript/">JavaScript<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/MQL/">MQL<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/PowerQuery/">PowerQuery<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/Python/">Python<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/VBA/">VBA<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/categories/VBS/">VBS<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/WordPress/">WordPress<span class="sidebar_archives-count">3</span></a>
+                <a class="sidebar_archives-link" href="/categories/AWS/">AWS<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/C/">C#<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/categories/Git/">Git<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Hexo/">Hexo<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/JavaScript/">JavaScript<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/MQL/">MQL<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Oracle/">Oracle<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/PowerQuery/">PowerQuery<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/Python/">Python<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/VBA/">VBA<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/categories/VBS/">VBS<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/WordPress/">WordPress<span class="sidebar_archives-count">3</span></a>
             </ul>
         </li>
         
