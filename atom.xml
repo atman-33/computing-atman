@@ -6,7 +6,7 @@
   <link href="https://www.computing-atman.com/atom.xml" rel="self"/>
   
   <link href="https://www.computing-atman.com/"/>
-  <updated>2023-03-11T14:06:59.103Z</updated>
+  <updated>2023-03-12T08:14:13.469Z</updated>
   <id>https://www.computing-atman.com/</id>
   
   <author>
@@ -15,6 +15,39 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>【C#】Xamarin で Android 実機に接続</title>
+    <link href="https://www.computing-atman.com/2023/03/12/35-xamarin-connect-android-cs/"/>
+    <id>https://www.computing-atman.com/2023/03/12/35-xamarin-connect-android-cs/</id>
+    <published>2023-03-12T07:27:42.000Z</published>
+    <updated>2023-03-12T08:14:13.469Z</updated>
+    
+    <content type="html"><![CDATA[<p>Visual Studio の Xamarin Forms から、Android端末の実機に接続する手順を記します。</p><p>Android端末の種類にも依ると思いますが、Webに掲載されている手順で上手くいかない場合に参考にして下さい。</p><hr><p>目次</p><!-- toc --><ul><li><a href="#%E6%89%8B%E9%A0%86">手順</a><ul><li><a href="#1-xamarin-%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E4%BD%9C%E6%88%90">1. Xamarin プロジェクト作成</a></li><li><a href="#2-android-sdk-manager%E3%82%92%E8%B5%B7%E5%8B%95">2. Android SDK Managerを起動</a></li><li><a href="#3-android%E9%96%A2%E9%80%A3%E3%81%AE%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">3. Android関連のソフトウェアをインストール</a></li><li><a href="#4-pc%E3%82%92%E9%96%8B%E7%99%BA%E8%80%85%E3%83%A2%E3%83%BC%E3%83%89%E3%81%AB%E5%A4%89%E6%9B%B4">4. PCを開発者モードに変更</a></li><li><a href="#5-android%E7%AB%AF%E6%9C%AB%E3%82%92%E9%96%8B%E7%99%BA%E8%80%85%E3%83%A2%E3%83%BC%E3%83%89%E3%81%AB%E5%A4%89%E6%9B%B4">5. Android端末を開発者モードに変更</a></li><li><a href="#6-andoroid%E7%AB%AF%E6%9C%AB%E3%81%AEusb%E3%83%87%E3%83%90%E3%83%83%E3%82%B0%E3%82%92%E6%9C%89%E5%8A%B9">6. Andoroid端末のUSBデバッグを有効</a></li><li><a href="#7-usb%E3%82%B1%E3%83%BC%E3%83%96%E3%83%AB%E5%A4%89%E6%9B%B4">7. USBケーブル変更</a></li><li><a href="#8-android-%E3%81%AEusb%E8%A8%AD%E5%AE%9A%E3%82%92%E5%A4%89%E6%9B%B4">8. Android のUSB設定を変更</a></li><li><a href="#9-samsung%E3%83%89%E3%83%A9%E3%82%A4%E3%83%90%E3%83%BC%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">9. Samsungドライバーをインストール</a></li></ul></li></ul><!-- tocstop --><hr><h2><span id="手順">手順</span></h2><p>環境は以下となります。</p><ul><li>Visual Studio 2023</li><li>Android端末 : Galaxy S10</li><li>Androidバージョン : 12</li><li>PCとAndoroid端末はUSB接続</li></ul><h3><span id="1-xamarin-プロジェクト作成">1. Xamarin プロジェクト作成</span></h3><p>Visual Studio で Xamarin のプロジェクトを作成して開きます。</p><h3><span id="2-android-sdk-managerを起動">2. Android SDK Managerを起動</span></h3><p>タブの ツール &gt; Android &gt; Android SDK Manager を起動します。</p><h3><span id="3-android関連のソフトウェアをインストール">3. Android関連のソフトウェアをインストール</span></h3><p>接続するAndroid端末のAndroiバージョンに対応したSDK Platformをインストールします。</p><p>Androidバージョン12の場合</p><ul><li>プラットフォーム &gt; Andoroid 12.0 - S &gt; Android SDK Platform 31</li></ul><p>また、Andoroid端末とUSB接続するのでドライバーも必要です。</p><ul><li>ツール &gt; 追加 &gt; Google USB Driver</li></ul><h3><span id="4-pcを開発者モードに変更">4. PCを開発者モードに変更</span></h3><p>設定 &gt; 開発者向け で設定を変更します。</p><ul><li>開発者モード : ON</li><li>デバイスの検出 : ON</li></ul><img src="/2023/03/12/35-xamarin-connect-android-cs/1.png" class><h3><span id="5-android端末を開発者モードに変更">5. Android端末を開発者モードに変更</span></h3><p>Galaxyの場合は以下の手順です。</p><ul><li>設定アプリ &gt; 端末情報　を開く</li><li>ソフトウェア情報　を選択</li><li>ビルド番号 を 7回連続 でタップ</li></ul><p>これで開発者モードがONとなり、設定アプリの一番下に「開発者向けオプション」が表示されます。</p><h3><span id="6-andoroid端末のusbデバッグを有効">6. Andoroid端末のUSBデバッグを有効</span></h3><p>引き続き、Andoroid端末の「開発者向けオプション」設定を変更します。</p><ul><li>USBデバッグ : ON に変更</li></ul><p>この時点で、PCとAndoroid端末をUSBケーブルで接続し、Visual Studio の Androidプロジェクトからデバッグ起動する際に「Andoroid端末」が表示されていれば問題無く完了です。</p><p>もし、この時点でもVisual Studio上でAndoroid端末を認識していないようであれば、以下を試して下さい。</p><h3><span id="7-usbケーブル変更">7. USBケーブル変更</span></h3><p>PCとAndoroid端末をUSB接続しているにも関わらず、PCのエクスプローラー上にAndoroid端末が表示されていない場合、<strong>USBケーブルが対応していない可能性</strong>があります。</p><p>USBケーブルを変更し、WindowsがAndoroid端末を認識しているか確認してください。<br>（通常、USB接続した時点でポップアップ等が表示されます）</p><h3><span id="8-android-のusb設定を変更">8. Android のUSB設定を変更</span></h3><p>Andoroid端末の「開発者向けオプション」設定を変更します。</p><ul><li>標準USB設定 &gt; <strong>画像を転送</strong> を選択</li></ul><p>ここまでの設定で概ね上手くいくと思います。</p><p>これでもPCがAndoroid端末を認識しない場合は以下をお試しください。</p><h3><span id="9-samsungドライバーをインストール">9. Samsungドライバーをインストール</span></h3><p>PCにSamsungドライバーをインストールしてみます。</p><p><a href="https://developer.samsung.com/android-usb-driver">https://developer.samsung.com/android-usb-driver</a></p><p>それでも上手くいかない場合は、他サイトを参考にしてトライしていくしかないでしょう。</p><hr><p>以上です。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;Visual Studio の Xamarin Forms から、Android端末の実機に接続する手順を記します。&lt;/p&gt;
+&lt;p&gt;Android端末の種類にも依ると思いますが、Webに掲載されている手順で上手くいかない場合に参考にして下さい。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;目次</summary>
+      
+    
+    
+    
+    <category term="C#" scheme="https://www.computing-atman.com/categories/C/"/>
+    
+    
+    <category term="C#" scheme="https://www.computing-atman.com/tags/C/"/>
+    
+    <category term="Xamarin" scheme="https://www.computing-atman.com/tags/Xamarin/"/>
+    
+    <category term="Android" scheme="https://www.computing-atman.com/tags/Android/"/>
+    
+    <category term="Visual Studio" scheme="https://www.computing-atman.com/tags/Visual-Studio/"/>
+    
+  </entry>
   
   <entry>
     <title>【Oracle】21c XE 構築手順</title>
@@ -568,35 +601,6 @@ npm in</summary>
     <category term="WordPress" scheme="https://www.computing-atman.com/tags/WordPress/"/>
     
     <category term="GoogleAdSense" scheme="https://www.computing-atman.com/tags/GoogleAdSense/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【VBA】ExcelからSQL Plusを実行してセッション切断</title>
-    <link href="https://www.computing-atman.com/2023/02/26/15-kill-oracle-session-excel-vba/"/>
-    <id>https://www.computing-atman.com/2023/02/26/15-kill-oracle-session-excel-vba/</id>
-    <published>2023-02-25T15:14:41.000Z</published>
-    <updated>2023-03-05T12:38:42.330Z</updated>
-    
-    <content type="html"><![CDATA[<p>Oracleデータベースを使ったアプリケーションでは、誰かがアプリを操作したままとなり、<br>データベースがロックされた状態になることがあります。</p><p>今回、そのロック状態を解除するため、<br>ExcelからSQL Plus を実行してセッションを強制切断（ロック解除）する方法を説明します。</p><p><a href="https://github.com/atman-33/template-excel-vba/tree/main/SQLPlus%E5%AE%9F%E8%A1%8C_Oracle%E3%82%BB%E3%83%83%E3%82%B7%E3%83%A7%E3%83%B3%E5%88%87%E6%96%AD">サンプルのExcelをダウンロード</a></p><hr><p>目次</p><!-- toc --><ul><li><a href="#%E6%A6%82%E8%A6%81">概要</a></li><li><a href="#%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E6%A7%8B%E6%88%90">パッケージ構成</a></li><li><a href="#%E3%82%BD%E3%83%BC%E3%82%B9%E3%82%B3%E3%83%BC%E3%83%89%E8%A7%A3%E8%AA%AC">ソースコード解説</a><ul><li><a href="#1modulesqlplus">①ModuleSqlPlus</a></li><li><a href="#2main">②Main</a></li></ul></li></ul><!-- tocstop --><hr><h2><span id="概要">概要</span></h2><p>まず、Oracleがロック状態になっていることを確認してみます。</p><p>下記のSQLを、SQL Developer やSQL Plusu から実行することで、<br>ロック状態を引き起こしているのが <strong>どこから（どのPCから）の接続なのか</strong> 確認できます。</p><pre><code>select   s.sid, s.serial#, s.username, s.osuser, s.machine, s.terminal, s.program, o.object_name from   v$session s, v$locked_object l, dba_objects o where   s.sid = l.session_id and l.object_id = o.object_id</code></pre><p>ロック状態の場合は下記のようにレコードが抽出されます。</p><img src="/2023/02/26/15-kill-oracle-session-excel-vba/oracle-lock.png" class><p>ロック状態を解除するには、抽出したレコードの中にあるSIDとSERIAL#が必要となります。<br>（上の例では、 SID&#x3D;277, SERIAL#&#x3D;18621）</p><h2><span id="パッケージ構成">パッケージ構成</span></h2><p>Excelマクロ内の構成は下記となります。</p><pre><code>標準モジュール|- Main|- ModuleSqlPlus</code></pre><p>main から modSqlPlus の関数を呼び出すシンプルな構造です。</p><h2><span id="ソースコード解説">ソースコード解説</span></h2><p>ExcelのVBA、いわゆるマクロ処理のソースコードとなります。</p><hr><h3><span id="1modulesqlplus">①ModuleSqlPlus</span></h3><p>SQL Plus からSQLを実行するために必要な関数を格納しています。</p><pre><code class="vb:ModuleSqlPlus">Option Explicit&#39; ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----&#39; brief : SQL文からSQLPlusを実行&#39; note  :&#39; ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----Public Sub Sqlplus(user As String, password As String, serviceName As String, sql As String)    Dim sqlFile As String    &#39; 実行するSQLファイル    sqlFile = &quot;temp.sql&quot;    &#39; SQLファイルを作成    CreateSqlFile sqlFile, sql    Debug.Print &quot;【実行するSQL文】&quot;    Debug.Print &quot;---- ---- ----&quot;    Debug.Print sql    Debug.Print &quot;---- ---- ----&quot;    &#39; SQLPLUSからSQLファイルを実行    SqlplusFromFile user, password, serviceName, sqlFile    &#39; SQLファイルを削除    KillSqlFile sqlFileEnd Sub&#39; ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----&#39; brief : SQLファイルからSQLPlusを実行&#39; note  :&#39; ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----Public Sub SqlplusFromFile(user As String, password As String, serviceName As String, sqlFile As String)    Dim cmd As String     &#39;シェルコマンド    Dim objWSH As Object  &#39;WSH    cmd = &quot;sqlplus &quot; &amp; user &amp; &quot;/&quot; &amp; password &amp; &quot;@&quot; &amp; serviceName &amp; &quot; as sysdba &quot; &amp; &quot;@&quot; &amp; ActiveWorkbook.Path &amp; &quot;\&quot; &amp; sqlFile    Debug.Print &quot;ORACLE; sqlplusを実行&quot;    Debug.Print cmd    &#39;非同期で実行される    &#39;Call Shell(cmd, vbHide)On Error GoTo Exception    &#39;同期で実行する    Set objWSH = CreateObject(&quot;WScript.Shell&quot;)    objWSH.Run cmd, 1, True    GoTo FinallyException:    Call MsgBox(Err.Description, vbOKOnly, &quot;異常終了&quot;)    GoTo FinallyFinally:    Set objWSH = Nothing              &#39; オブジェクトを解放End Sub&#39; ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----&#39; brief : セッションを切るSQLコマンドを実施&#39; note  :&#39; ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----Public Sub KillSession(user As String, password As String, serviceName As String, sid As String, serial As String)    Dim sql As String    &#39; 実行するSQL    sql = &quot;alter system kill session &#39;&quot; &amp; sid &amp; &quot;,&quot; &amp; serial &amp; &quot;&#39;;&quot; &amp; vbCrLf &amp; &quot;exit;&quot;    Sqlplus user, password, serviceName, sqlEnd Sub&#39; ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----&#39; brief : SQLファイルを作成&#39; note  :&#39; ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----Public Sub CreateSqlFile(fileName As String, sql As String)    Dim strFilePath As String    strFilePath = ActiveWorkbook.Path &amp; &quot;\&quot; &amp; fileName &#39;ファイルパス    Debug.Print &quot;ファイル作成：&quot; &amp; strFilePath    Open strFilePath For Output As #1    Print #1, sql    Close #1End Sub&#39; ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----&#39; brief : SQLファイルを削除&#39; note  :&#39; ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----Public Sub KillSqlFile(fileName As String)    Dim strFilePath As String    strFilePath = ActiveWorkbook.Path &amp; &quot;\&quot; &amp; fileName &#39;ファイルパス    Debug.Print &quot;ファイル削除開始：&quot; &amp; strFilePath    Kill strFilePathEnd Sub</code></pre><p>SQL Plus Windows Shell、つまりコマンドプロンプトから実行する必要があります。</p><p>そのため、一度SQL文が格納されたファイルを作成し、そのファイルをSQL Plus で実行するようにしています。</p><hr><h3><span id="2main">②Main</span></h3><p>Oracle接続している（ロックしている）セッションを切断します。</p><pre><code>Option Explicit&#39; メイン処理Public Sub Main()    Dim user As String    Dim password As String    Dim serviceName As String    Dim sid As String    Dim serial As String    user = &quot;sys&quot;    password = &quot;1234&quot;    serviceName = &quot;TESTDB&quot;    sid = &quot;277&quot;    serial = &quot;16127&quot;    &#39; Oracle接続セッションを切断    KillSession user, password, serviceName, sid, serial    Debug.Print &quot;処理終了&quot;End Sub</code></pre><p>上記の例では、modSqlPlusモジュールのkillSession を呼び出して、その引数に必要なSIDとSERIAL#を渡しています。</p><p>以上です。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;Oracleデータベースを使ったアプリケーションでは、誰かがアプリを操作したままとなり、&lt;br&gt;データベースがロックされた状態になることがあります。&lt;/p&gt;
-&lt;p&gt;今回、そのロック状態を解除するため、&lt;br&gt;ExcelからSQL Plus を実行してセッションを強制切断（ロ</summary>
-      
-    
-    
-    
-    <category term="VBA" scheme="https://www.computing-atman.com/categories/VBA/"/>
-    
-    
-    <category term="Excel" scheme="https://www.computing-atman.com/tags/Excel/"/>
-    
-    <category term="VBA" scheme="https://www.computing-atman.com/tags/VBA/"/>
-    
-    <category term="SQL Plus" scheme="https://www.computing-atman.com/tags/SQL-Plus/"/>
     
   </entry>
   

@@ -48,7 +48,7 @@
     
     <title>
         
-            【VBS】iniファイルのデータを取得する | 
+            【C#】Xamarin で Android 実機に接続 | 
         
         Computing Atman
     </title>
@@ -59,7 +59,7 @@
 
     <meta name="format-detection" content="telephone=no"/>
     <meta name="description" itemprop="description" content="IT関連の情報を発信します。">
-    <meta name="keywords" content=",VBS">
+    <meta name="keywords" content=",C#,Xamarin,Android,Visual Studio">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -220,7 +220,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="Computing Atman">
-    <meta name="msapplication-starturl" content="https://www.computing-atman.com/2023/02/23/3-get-ini-data-vbs/">
+    <meta name="msapplication-starturl" content="https://www.computing-atman.com/2023/03/12/35-xamarin-connect-android-cs/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="Computing Atman">
@@ -235,16 +235,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="https://www.computing-atman.com/2023/02/23/3-get-ini-data-vbs/">
+    <meta property="og:url" content="https://www.computing-atman.com/2023/03/12/35-xamarin-connect-android-cs/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="【VBS】iniファイルのデータを取得する | Computing Atman">
+    <meta property="og:title" content="【C#】Xamarin で Android 実機に接続 | Computing Atman">
     <meta property="og:image" content="/img/favicon.png">
     <meta property="og:description" content="IT関連の情報を発信します。">
-    <meta property="og:article:tag" content="VBS"> 
+    <meta property="og:article:tag" content="C#"> <meta property="og:article:tag" content="Xamarin"> <meta property="og:article:tag" content="Android"> <meta property="og:article:tag" content="Visual Studio"> 
 
     
-        <meta property="article:published_time" content="Thu Feb 23 2023 21:46:02 GMT+0900">
-        <meta property="article:modified_time" content="Sun Mar 05 2023 21:38:42 GMT+0900">
+        <meta property="article:published_time" content="Sun Mar 12 2023 16:27:42 GMT+0900">
+        <meta property="article:modified_time" content="Sun Mar 12 2023 17:14:13 GMT+0900">
     
 
     <!-- The Twitter Card protocol -->
@@ -252,7 +252,7 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="https://www.computing-atman.com/2023/02/23/3-get-ini-data-vbs/index.html" />
+        <link rel="canonical" href="https://www.computing-atman.com/2023/03/12/35-xamarin-connect-android-cs/index.html" />
     
 
     <!-- Structured-data for SEO -->
@@ -264,10 +264,10 @@
 {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "mainEntityOfPage": "https://www.computing-atman.com/2023/02/23/3-get-ini-data-vbs/index.html",
-    "headline": "【VBS】iniファイルのデータを取得する",
-    "datePublished": "Thu Feb 23 2023 21:46:02 GMT+0900",
-    "dateModified": "Sun Mar 05 2023 21:38:42 GMT+0900",
+    "mainEntityOfPage": "https://www.computing-atman.com/2023/03/12/35-xamarin-connect-android-cs/index.html",
+    "headline": "【C#】Xamarin で Android 実機に接続",
+    "datePublished": "Sun Mar 12 2023 16:27:42 GMT+0900",
+    "dateModified": "Sun Mar 12 2023 17:14:13 GMT+0900",
     "author": {
         "@type": "Person",
         "name": "Atman",
@@ -285,7 +285,7 @@
             "url": "/img/favicon.png"
         }
     },
-    "keywords": ",VBS",
+    "keywords": ",C#,Xamarin,Android,Visual Studio",
     "description": "IT関連の情報を発信します。"
 }
 </script>
@@ -377,7 +377,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link"><span class="post-toc-number">1.</span> <span class="post-toc-text">フォルダ構造</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link"><span class="post-toc-number">2.</span> <span class="post-toc-text">サンプルソース</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link"><span class="post-toc-number">3.</span> <span class="post-toc-text">解説</span></a></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link"><span class="post-toc-number">1.</span> <span class="post-toc-text">手順</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">1. Xamarin プロジェクト作成</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">2. Android SDK Managerを起動</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">3. Android関連のソフトウェアをインストール</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">4. PCを開発者モードに変更</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">5. Android端末を開発者モードに変更</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link"><span class="post-toc-number">1.6.</span> <span class="post-toc-text">6. Andoroid端末のUSBデバッグを有効</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link"><span class="post-toc-number">1.7.</span> <span class="post-toc-text">7. USBケーブル変更</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link"><span class="post-toc-number">1.8.</span> <span class="post-toc-text">8. Android のUSB設定を変更</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link"><span class="post-toc-number">1.9.</span> <span class="post-toc-text">9. Samsungドライバーをインストール</span></a></li></ol></li></ol>
     </ul>
     
 
@@ -409,7 +409,7 @@
         
     
             <p class="article-headline-p">
-                【VBS】iniファイルのデータを取得する
+                【C#】Xamarin で Android 実機に接続
             </p>
         </div>
 
@@ -428,7 +428,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>Atman</strong>
-        <span>2月 23, 2023</span>
+        <span>3月 12, 2023</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -452,7 +452,7 @@
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        <a class="post_tag-none-link" href="/tags/VBS/" rel="tag">VBS</a>
+        <a class="post_tag-none-link" href="/tags/Android/" rel="tag">Android</a></li><li class="mdl-menu__item"><a class="post_tag-none-link" href="/tags/C/" rel="tag">C#</a></li><li class="mdl-menu__item"><a class="post_tag-none-link" href="/tags/Visual-Studio/" rel="tag">Visual Studio</a></li><li class="mdl-menu__item"><a class="post_tag-none-link" href="/tags/Xamarin/" rel="tag">Xamarin</a>
     </ul>
     
 
@@ -472,7 +472,7 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=【VBS】iniファイルのデータを取得する&url=https://www.computing-atman.com/2023/02/23/3-get-ini-data-vbs/index.html&via=Atman" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=【C#】Xamarin で Android 実機に接続&url=https://www.computing-atman.com/2023/03/12/35-xamarin-connect-android-cs/index.html&via=Atman" target="_blank">
             <li class="mdl-menu__item">
                 Twitter での共有
             </li>
@@ -481,7 +481,7 @@
 
     <!-- Share Facebook -->
     
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://www.computing-atman.com/2023/02/23/3-get-ini-data-vbs/index.html" target="_blank">
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://www.computing-atman.com/2023/03/12/35-xamarin-connect-android-cs/index.html" target="_blank">
             <li class="mdl-menu__item">
                 Facebook での共有
             </li>
@@ -490,7 +490,7 @@
 
     <!-- Share Google+ -->
     
-        <a class="post_share-link" href="https://plus.google.com/share?url=https://www.computing-atman.com/2023/02/23/3-get-ini-data-vbs/index.html" target="_blank">
+        <a class="post_share-link" href="https://plus.google.com/share?url=https://www.computing-atman.com/2023/03/12/35-xamarin-connect-android-cs/index.html" target="_blank">
             <li class="mdl-menu__item">
                 Google+ での共有
             </li>
@@ -515,126 +515,80 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <p>Config.ini ファイルに格納されたデータを取得する方法を説明します。</p>
+        <p>Visual Studio の Xamarin Forms から、Android端末の実機に接続する手順を記します。</p>
+<p>Android端末の種類にも依ると思いますが、Webに掲載されている手順で上手くいかない場合に参考にして下さい。</p>
 <hr>
 <p>目次</p>
 <!-- toc -->
 
 <ul>
-<li><a href="#%E3%83%95%E3%82%A9%E3%83%AB%E3%83%80%E6%A7%8B%E9%80%A0">フォルダ構造</a></li>
-<li><a href="#%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AB%E3%82%BD%E3%83%BC%E3%82%B9">サンプルソース</a></li>
-<li><a href="#%E8%A7%A3%E8%AA%AC">解説</a></li>
+<li><a href="#%E6%89%8B%E9%A0%86">手順</a><ul>
+<li><a href="#1-xamarin-%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E4%BD%9C%E6%88%90">1. Xamarin プロジェクト作成</a></li>
+<li><a href="#2-android-sdk-manager%E3%82%92%E8%B5%B7%E5%8B%95">2. Android SDK Managerを起動</a></li>
+<li><a href="#3-android%E9%96%A2%E9%80%A3%E3%81%AE%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">3. Android関連のソフトウェアをインストール</a></li>
+<li><a href="#4-pc%E3%82%92%E9%96%8B%E7%99%BA%E8%80%85%E3%83%A2%E3%83%BC%E3%83%89%E3%81%AB%E5%A4%89%E6%9B%B4">4. PCを開発者モードに変更</a></li>
+<li><a href="#5-android%E7%AB%AF%E6%9C%AB%E3%82%92%E9%96%8B%E7%99%BA%E8%80%85%E3%83%A2%E3%83%BC%E3%83%89%E3%81%AB%E5%A4%89%E6%9B%B4">5. Android端末を開発者モードに変更</a></li>
+<li><a href="#6-andoroid%E7%AB%AF%E6%9C%AB%E3%81%AEusb%E3%83%87%E3%83%90%E3%83%83%E3%82%B0%E3%82%92%E6%9C%89%E5%8A%B9">6. Andoroid端末のUSBデバッグを有効</a></li>
+<li><a href="#7-usb%E3%82%B1%E3%83%BC%E3%83%96%E3%83%AB%E5%A4%89%E6%9B%B4">7. USBケーブル変更</a></li>
+<li><a href="#8-android-%E3%81%AEusb%E8%A8%AD%E5%AE%9A%E3%82%92%E5%A4%89%E6%9B%B4">8. Android のUSB設定を変更</a></li>
+<li><a href="#9-samsung%E3%83%89%E3%83%A9%E3%82%A4%E3%83%90%E3%83%BC%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">9. Samsungドライバーをインストール</a></li>
+</ul>
+</li>
 </ul>
 <!-- tocstop -->
 
 <hr>
-<h2><span id="フォルダ構造">フォルダ構造</span></h2><p>下記のように Config.ini と GetIniData.vbs Config.ini に含まれたデータを読み取ります。</p>
-<pre><code class="bash">任意のフォルダ
- ├ Config.ini
- └ GetIniData.vbs
-</code></pre>
-<h2><span id="サンプルソース">サンプルソース</span></h2><p>Config.ini</p>
-<pre><code class="bash">[test1]
-data1=あいうえお
-data2=かきくけこ
-[test2]
-data3=abcde
-data4=fghij
-</code></pre>
-<p>▼GetIniData.vbs</p>
-<pre><code class="bash">Option Explicit
+<h2><span id="手順">手順</span></h2><p>環境は以下となります。</p>
+<ul>
+<li>Visual Studio 2023</li>
+<li>Android端末 : Galaxy S10</li>
+<li>Androidバージョン : 12</li>
+<li>PCとAndoroid端末はUSB接続</li>
+</ul>
+<h3><span id="1-xamarin-プロジェクト作成">1. Xamarin プロジェクト作成</span></h3><p>Visual Studio で Xamarin のプロジェクトを作成して開きます。</p>
+<h3><span id="2-android-sdk-managerを起動">2. Android SDK Managerを起動</span></h3><p>タブの ツール &gt; Android &gt; Android SDK Manager を起動します。</p>
+<h3><span id="3-android関連のソフトウェアをインストール">3. Android関連のソフトウェアをインストール</span></h3><p>接続するAndroid端末のAndroiバージョンに対応したSDK Platformをインストールします。</p>
+<p>Androidバージョン12の場合</p>
+<ul>
+<li>プラットフォーム &gt; Andoroid 12.0 - S &gt; Android SDK Platform 31</li>
+</ul>
+<p>また、Andoroid端末とUSB接続するのでドライバーも必要です。</p>
+<ul>
+<li>ツール &gt; 追加 &gt; Google USB Driver</li>
+</ul>
+<h3><span id="4-pcを開発者モードに変更">4. PCを開発者モードに変更</span></h3><p>設定 &gt; 開発者向け で設定を変更します。</p>
+<ul>
+<li>開発者モード : ON</li>
+<li>デバイスの検出 : ON</li>
+</ul>
+<img src="/2023/03/12/35-xamarin-connect-android-cs/1.png" class>
 
-Msgbox GetIniData(GetCurrentDirectory() &amp; &quot;\Config.ini&quot;, &quot;test1&quot;, &quot;data1&quot;)
-
-&#39; ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----
-&#39; breif : カレントフォルダを取得する。
-&#39; note  :
-&#39; ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----
-Function GetCurrentDirectory()
-
-    Dim objWshShell     &#39; WshShell オブジェクト
-
-    Set objWshShell = WScript.CreateObject(&quot;WScript.Shell&quot;)
-    If Err.Number &lt;&gt; 0 Then
-        WScript.Echo &quot;エラー: &quot; &amp; Err.Description
-        wscript.quit(1)
-    End If
-    getCurrentDirectory = objWshShell.CurrentDirectory
-
-End Function
-
-&#39; ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----
-&#39; breif : iniファイル、セクション名、パラメータ名からデータを取得する。
-&#39; note  :
-&#39; ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----
-Function GetIniData(strIniFileName, strSection, strKey)
-
-    Dim objFSO, objIniFile, objSectionDic, strReadLine, objKeyDic, arrReadLine
-    Dim strTempSection, objTempdic
-
-    &#39; ファイル入出力の定数
-    Const conForReading = 1, conForWriting = 2, conForAppending = 8
-    Set objFSO = CreateObject(&quot;Scripting.FileSystemObject&quot;)
-
-    &#39; ファイルのOPEN
-    Set objIniFile = objFSO.OpenTextFile(strIniFileName, conForReading, False)
-    If Err.Number &lt;&gt; 0 Then
-        &#39; エラーメッセージを出力
-        wscript.echo &quot;INIファイル名: &quot; &amp; strIniFileName
-        wscript.quit(1)
-    End If
-
-    &#39; 格納先Dictionaryオブジェクトの作成
-    Set objSectionDic = CreateObject(&quot;Scripting.Dictionary&quot;)
-
-    &#39; ファイルのリードREAD
-    strReadLine = objIniFile.ReadLine
-    Do While objIniFile.AtEndofStream = False
-        &#39; ステートメント開始行を検索
-        If (strReadLine &lt;&gt; &quot; &quot;) And (StrComp(&quot;[]&quot;, (Left(strReadLine, 1) &amp; Right(strReadLine, 1))) = 0) Then
-            &#39; セクション名を取得
-            strTempSection = Mid(strReadLine, 2, (Len(strReadLine) - 2))
-            &#39; キー用Dictionaryオブジェクト作成
-            Set objKeyDic = CreateObject(&quot;Scripting.Dictionary&quot;)
-            &#39; ファイルの最終行になるまでLoop
-            Do While objIniFile.AtEndofStream = False
-                strReadLine = objIniFile.ReadLine
-                If (strReadLine &lt;&gt; &quot;&quot;) And (StrComp(&quot;;&quot;, Left(strReadLine, 1)) &lt;&gt; 0) Then
-                    &#39; 次のステートメント開始行が出現したら、Loop終了
-                    If StrComp(&quot;[]&quot;, (Left(strReadLine, 1) &amp; Right(strReadLine, 1))) = 0 Then
-                        Exit Do
-                    End If
-                    &#39; １セクション内の定義をDictionaryオブジェクトに格納する
-                    arrReadLine = Split(strReadLine, &quot;=&quot;, 2, vbTextCompare)
-                    objKeyDic.Add UCase(arrReadLine(0)), arrReadLine(1)
-                End If
-            Loop
-            &#39; オブジェクトに格納する
-            objSectionDic.Add UCase(strTempSection), objKeyDic
-        Else
-            strReadLine = objIniFile.ReadLine
-        End If
-    Loop
-    &#39; ファイルのCLOSE
-    objIniFile.Close
-
-    &#39; ini配列から指定したセクション、パラメータに対応するデータを取得
-    strSection = UCase(strSection)  &#39; 大文字化
-    strKey = UCase(strKey)          &#39; 大文字化
-
-    If objSectionDic.Exists(strSection) Then
-        Set objTempdic = objSectionDic.Item(strSection)
-        If objTempdic.Exists(strKey) Then
-            getIniData = objSectionDic(strSection)(strKey)
-            Exit Function
-        End If
-    End If
-    GetIniData = &quot;&quot;
-
-End Function
-</code></pre>
-<h2><span id="解説">解説</span></h2><p>ini ファイルからデータを取り出す際、Settings.ini の各データを辞書オブジェクトに格納し、そこからセクション（ex.[test1]）とパラメータ名（ex.data1）を引き出します。</p>
-<p>上記のサンプルでは、カレントディレクトリの ini ファイルを読み出すようにしています。別フォルダを参照する場合は、ini ファイルの読み込み先を書き換えて使用してみて下さい。</p>
+<h3><span id="5-android端末を開発者モードに変更">5. Android端末を開発者モードに変更</span></h3><p>Galaxyの場合は以下の手順です。</p>
+<ul>
+<li>設定アプリ &gt; 端末情報　を開く</li>
+<li>ソフトウェア情報　を選択</li>
+<li>ビルド番号 を 7回連続 でタップ</li>
+</ul>
+<p>これで開発者モードがONとなり、設定アプリの一番下に「開発者向けオプション」が表示されます。</p>
+<h3><span id="6-andoroid端末のusbデバッグを有効">6. Andoroid端末のUSBデバッグを有効</span></h3><p>引き続き、Andoroid端末の「開発者向けオプション」設定を変更します。</p>
+<ul>
+<li>USBデバッグ : ON に変更</li>
+</ul>
+<p>この時点で、PCとAndoroid端末をUSBケーブルで接続し、Visual Studio の Androidプロジェクトからデバッグ起動する際に「Andoroid端末」が表示されていれば問題無く完了です。</p>
+<p>もし、この時点でもVisual Studio上でAndoroid端末を認識していないようであれば、以下を試して下さい。</p>
+<h3><span id="7-usbケーブル変更">7. USBケーブル変更</span></h3><p>PCとAndoroid端末をUSB接続しているにも関わらず、PCのエクスプローラー上にAndoroid端末が表示されていない場合、<strong>USBケーブルが対応していない可能性</strong>があります。</p>
+<p>USBケーブルを変更し、WindowsがAndoroid端末を認識しているか確認してください。<br>（通常、USB接続した時点でポップアップ等が表示されます）</p>
+<h3><span id="8-android-のusb設定を変更">8. Android のUSB設定を変更</span></h3><p>Andoroid端末の「開発者向けオプション」設定を変更します。</p>
+<ul>
+<li>標準USB設定 &gt; <strong>画像を転送</strong> を選択</li>
+</ul>
+<p>ここまでの設定で概ね上手くいくと思います。</p>
+<p>これでもPCがAndoroid端末を認識しない場合は以下をお試しください。</p>
+<h3><span id="9-samsungドライバーをインストール">9. Samsungドライバーをインストール</span></h3><p>PCにSamsungドライバーをインストールしてみます。</p>
+<p><a target="_blank" rel="noopener" href="https://developer.samsung.com/android-usb-driver">https://developer.samsung.com/android-usb-driver</a></p>
+<p>それでも上手くいかない場合は、他サイトを参考にしてトライしていくしかないでしょう。</p>
+<hr>
+<p>以上です。</p>
 
         
     
@@ -655,21 +609,13 @@ End Function
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/2023/02/25/4-scroll-code-wordpress-hestia/" id="post_nav-newer" class="prev-content">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_back</i>
-            </button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            Newer
-        </a>
-    
 
     <!-- Section Spacer -->
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
     
-        <a href="/2023/02/23/2-get-current-folder-vbs/" id="post_nav-older" class="next-content">
+        <a href="/2023/03/11/34-install-oracle-xe/" id="post_nav-older" class="next-content">
             Older
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">

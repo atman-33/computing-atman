@@ -4,6 +4,37 @@
   
     
     <entry>
+      <title>【C#】Xamarin で Android 実機に接続</title>
+      <link href="/2023/03/12/35-xamarin-connect-android-cs/"/>
+      <url>/2023/03/12/35-xamarin-connect-android-cs/</url>
+      
+        <content type="html"><![CDATA[<p>Visual Studio の Xamarin Forms から、Android端末の実機に接続する手順を記します。</p><p>Android端末の種類にも依ると思いますが、Webに掲載されている手順で上手くいかない場合に参考にして下さい。</p><hr><p>目次</p><!-- toc --><ul><li><a href="#%E6%89%8B%E9%A0%86">手順</a><ul><li><a href="#1-xamarin-%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E4%BD%9C%E6%88%90">1. Xamarin プロジェクト作成</a></li><li><a href="#2-android-sdk-manager%E3%82%92%E8%B5%B7%E5%8B%95">2. Android SDK Managerを起動</a></li><li><a href="#3-android%E9%96%A2%E9%80%A3%E3%81%AE%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">3. Android関連のソフトウェアをインストール</a></li><li><a href="#4-pc%E3%82%92%E9%96%8B%E7%99%BA%E8%80%85%E3%83%A2%E3%83%BC%E3%83%89%E3%81%AB%E5%A4%89%E6%9B%B4">4. PCを開発者モードに変更</a></li><li><a href="#5-android%E7%AB%AF%E6%9C%AB%E3%82%92%E9%96%8B%E7%99%BA%E8%80%85%E3%83%A2%E3%83%BC%E3%83%89%E3%81%AB%E5%A4%89%E6%9B%B4">5. Android端末を開発者モードに変更</a></li><li><a href="#6-andoroid%E7%AB%AF%E6%9C%AB%E3%81%AEusb%E3%83%87%E3%83%90%E3%83%83%E3%82%B0%E3%82%92%E6%9C%89%E5%8A%B9">6. Andoroid端末のUSBデバッグを有効</a></li><li><a href="#7-usb%E3%82%B1%E3%83%BC%E3%83%96%E3%83%AB%E5%A4%89%E6%9B%B4">7. USBケーブル変更</a></li><li><a href="#8-android-%E3%81%AEusb%E8%A8%AD%E5%AE%9A%E3%82%92%E5%A4%89%E6%9B%B4">8. Android のUSB設定を変更</a></li><li><a href="#9-samsung%E3%83%89%E3%83%A9%E3%82%A4%E3%83%90%E3%83%BC%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">9. Samsungドライバーをインストール</a></li></ul></li></ul><!-- tocstop --><hr><h2><span id="手順">手順</span></h2><p>環境は以下となります。</p><ul><li>Visual Studio 2023</li><li>Android端末 : Galaxy S10</li><li>Androidバージョン : 12</li><li>PCとAndoroid端末はUSB接続</li></ul><h3><span id="1-xamarin-プロジェクト作成">1. Xamarin プロジェクト作成</span></h3><p>Visual Studio で Xamarin のプロジェクトを作成して開きます。</p><h3><span id="2-android-sdk-managerを起動">2. Android SDK Managerを起動</span></h3><p>タブの ツール &gt; Android &gt; Android SDK Manager を起動します。</p><h3><span id="3-android関連のソフトウェアをインストール">3. Android関連のソフトウェアをインストール</span></h3><p>接続するAndroid端末のAndroiバージョンに対応したSDK Platformをインストールします。</p><p>Androidバージョン12の場合</p><ul><li>プラットフォーム &gt; Andoroid 12.0 - S &gt; Android SDK Platform 31</li></ul><p>また、Andoroid端末とUSB接続するのでドライバーも必要です。</p><ul><li>ツール &gt; 追加 &gt; Google USB Driver</li></ul><h3><span id="4-pcを開発者モードに変更">4. PCを開発者モードに変更</span></h3><p>設定 &gt; 開発者向け で設定を変更します。</p><ul><li>開発者モード : ON</li><li>デバイスの検出 : ON</li></ul><img src="/2023/03/12/35-xamarin-connect-android-cs/1.png" class><h3><span id="5-android端末を開発者モードに変更">5. Android端末を開発者モードに変更</span></h3><p>Galaxyの場合は以下の手順です。</p><ul><li>設定アプリ &gt; 端末情報　を開く</li><li>ソフトウェア情報　を選択</li><li>ビルド番号 を 7回連続 でタップ</li></ul><p>これで開発者モードがONとなり、設定アプリの一番下に「開発者向けオプション」が表示されます。</p><h3><span id="6-andoroid端末のusbデバッグを有効">6. Andoroid端末のUSBデバッグを有効</span></h3><p>引き続き、Andoroid端末の「開発者向けオプション」設定を変更します。</p><ul><li>USBデバッグ : ON に変更</li></ul><p>この時点で、PCとAndoroid端末をUSBケーブルで接続し、Visual Studio の Androidプロジェクトからデバッグ起動する際に「Andoroid端末」が表示されていれば問題無く完了です。</p><p>もし、この時点でもVisual Studio上でAndoroid端末を認識していないようであれば、以下を試して下さい。</p><h3><span id="7-usbケーブル変更">7. USBケーブル変更</span></h3><p>PCとAndoroid端末をUSB接続しているにも関わらず、PCのエクスプローラー上にAndoroid端末が表示されていない場合、<strong>USBケーブルが対応していない可能性</strong>があります。</p><p>USBケーブルを変更し、WindowsがAndoroid端末を認識しているか確認してください。<br>（通常、USB接続した時点でポップアップ等が表示されます）</p><h3><span id="8-android-のusb設定を変更">8. Android のUSB設定を変更</span></h3><p>Andoroid端末の「開発者向けオプション」設定を変更します。</p><ul><li>標準USB設定 &gt; <strong>画像を転送</strong> を選択</li></ul><p>ここまでの設定で概ね上手くいくと思います。</p><p>これでもPCがAndoroid端末を認識しない場合は以下をお試しください。</p><h3><span id="9-samsungドライバーをインストール">9. Samsungドライバーをインストール</span></h3><p>PCにSamsungドライバーをインストールしてみます。</p><p><a href="https://developer.samsung.com/android-usb-driver">https://developer.samsung.com/android-usb-driver</a></p><p>それでも上手くいかない場合は、他サイトを参考にしてトライしていくしかないでしょう。</p><hr><p>以上です。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> C# </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C# </tag>
+            
+            <tag> Xamarin </tag>
+            
+            <tag> Android </tag>
+            
+            <tag> Visual Studio </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>【Oracle】21c XE 構築手順</title>
       <link href="/2023/03/11/34-install-oracle-xe/"/>
       <url>/2023/03/11/34-install-oracle-xe/</url>

@@ -3,6 +3,34 @@
 
 
     <url>
+        <loc>https://www.computing-atman.com/tags/Visual-Studio/</loc>
+        <lastmod>2023-03-12T08:14:13.469Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://www.computing-atman.com/tags/Android/</loc>
+        <lastmod>2023-03-12T08:14:13.469Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://www.computing-atman.com/tags/Xamarin/</loc>
+        <lastmod>2023-03-12T08:14:13.469Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://www.computing-atman.com/tags/C/</loc>
+        <lastmod>2023-03-12T08:14:13.469Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://www.computing-atman.com/tags/DB/</loc>
         <lastmod>2023-03-11T14:06:59.103Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -17,21 +45,7 @@
     </url>
 
     <url>
-        <loc>https://www.computing-atman.com/tags/Xamarin/</loc>
-        <lastmod>2023-03-11T12:17:37.572Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://www.computing-atman.com/tags/Prism/</loc>
-        <lastmod>2023-03-11T12:17:37.572Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://www.computing-atman.com/tags/C/</loc>
         <lastmod>2023-03-11T12:17:37.572Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
